@@ -7,7 +7,7 @@
   
   <name>Example LDD</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
-  <dictionary_type>Discipline</dictionary_type>
+  <dictionary_type>Mission</dictionary_type>
   <full_name>Doe, Jane</full_name>
   <steward_id>janedoe</steward_id>
   <namespace_id>example</namespace_id>
