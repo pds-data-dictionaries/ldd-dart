@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model 
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Ingest_LDD 
+    xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
+                        http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
+	<name>DART Mission</name>
+	<ldd_version_id>1.0.0.0</ldd_version_id>
+	<dictionary_type>Mission</dictionary_type>
+	<full_name>Raymond Espiritu</full_name>
+	<steward_id>sbn</steward_id>
+	<namespace_id>dart</namespace_id>
+	<comment>
+		This is the DART Mission local data dictionary setup file to be run on the 
+		PDS4 lddtool in order to create a local data dictionary.
+	</comment>
+	<last_modification_date_time>2021-02-11T23:00:00</last_modification_date_time>
+
+
+	<DD_Attribute>
+		<name>acquisition_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.acquisition_time</local_identifier>
+		<nillable_flag>true</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation.
+			This is the time for which the GNC attitude data is valid. See the DRACO SIS
+			for calculation of this value.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>badpix_invalidation_mode</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.badpix_invalidation_mode</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Flags whether bad pixels identified by the on-board bad pixel map are 
+			invalidated by SMARTNAV. When invalidated the pixels in the raw image
+			are set to the SNAVFLAG value in the raw fits header. 
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>USE</value>
+				<value_meaning>Bad pixels identified by bad pixel map 
+				are invalidated by SMARTNAV</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>BYPASS</value>
+				<value_meaning>Bad pixel map is not used to invalidate pixels.</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>binning</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.binning</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Identifies whether pixel binning was applied to generate the image.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>ON</value>
+				<value_meaning>Binning applied</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>OFF</value>
+				<value_meaning>Binning not applied</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>calibration_file</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.calibration_file</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Name of calibration table file provided by SMART Nav
+			to the spacecraft for use when onboard calibration is applied. Data values
+			from this file are added back to the downloaded image if applied to the image
+			on board. The file is stored on-board as a .mat file, but the same data values are archived in the
+			DRACO Calibrated Data Collection as a .fits file. The archived filename is the
+			same as the base filename shown here with the '.fits' extension. 
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_File_Name</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>detector_temp</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.detector_temp</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Instrument detector temperature for LICIACube. The 
+			container class identifies whether it is for LUKE or LEIA.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>detector1_temp</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.detector1_temp</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			DRACO detector temperature sensor 1.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>detector2_temp</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.detector2_temp</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			DRACO detector temperature sensor 2.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>fpe_temp</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.fpe_temp</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			DRACO FPE board temperature.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>liciacube_calibration_file</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.liciacube_calibration_file</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Name of calibration table file used by LICIACube calibration pipeline.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_File_Name</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>onboard_cal</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.onboard_cal</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Defines whether calibration table was applied to the DRACO image
+			onboard the DART spacecraft prior to downlink.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>ON</value>
+				<value_meaning>Onboard calibration applied</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>OFF</value>
+				<value_meaning>Onboard calibration not applied</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+						
+	<DD_Attribute>
+		<name>mission_phase</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.mission_phase</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			The mission_phase identifies the time period within the mission.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>prelaunch</value>
+				<value_meaning>The prelaunch phase refers to the period of software development and testing
+				of the data processing pipeline, before launch. Data products generated during this phase include
+				calibration files created during the ground testing of the instrument as well as data products
+				created for peer review.</value_meaning>
+   			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>commissioning</value>
+				<value_meaning>The commissioning phase lasts for TBD days after launch. Images acquired during
+				this phase include calibrations and functional testing for DRACO to ensure proper operations.
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>cruise</value>
+				<value_meaning>The cruise phase begins after the commissioning phase and runs until the
+				beginning of teh approach phase. Images acquired during this phase are used for 
+				several purposes, including for Optical navigation (OpNav), testing of SMART Nav
+				algorithms, and star calibrations to characterize distortion and responsivity.
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>approach</value>
+				<value_meaning>The approach phase begins begins when the Didymos
+					system is first acquired by DRACO, ~30 days before impact, and extends until the
+					terminal phase begins. During this phase, DRACO acquires a long-range suite of
+					observations where the Didymos system is mostly not resolvable.
+					Light curve information complementary to ground-based observations will be extracted from
+					these images.</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>terminal</value>
+				<value_meaning>The terminal phase begins with the initiation of
+					DART's autonomous navigation, ~4 h prior to impact, and extends until the final
+					phase begins. During this phase, the separation between Didymos and Dimorphos can
+					be resolved, and DRACO images support both autonomous navigation (via Smart Nav algorithms)
+					and characterization of Didymos and Dimorphos. The final image to contain both members of 
+					the system will be acquired ~4 minutes before impact, at a scale of ~7m. By the end of 
+					this phase, images will be obtained of Dimorphos that have a 2 x 2 binned pixel scale
+					of ~3.5m.
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>final</value>
+				<value_meaning>The final phase comprises the last ~4 min of the DART
+					mission. During this phase, all DRACO images will be devoted to characterization
+					of Dimorphos, as autonomous navingation will have been completed. In the baseline trajectory
+					at ~20s (TBR after launch) prior to impact, DRACO achieves its requirement to image
+					Dimorphos at a pixel scale of 66 cm. Higher resolution images will continue to be acquired
+					in the final seconds of DART spacecraft operations, which end upon impact.
+				</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+
+	<DD_Attribute>
+		<name>exposure_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.exposure_time</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Image exposure time in seconds.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>gain</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.gain</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Defines the detector gain setting used. The container class
+			identifies whether this is for the DRACO, LUKE, or LEIA detectors.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>1X</value>
+				<value_meaning>Low gain amplification 1X.</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>2X</value>
+				<value_meaning>Low gain amplification 2X.
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>10X</value>
+				<value_meaning>High gain amplification 10X.
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>30X</value>
+				<value_meaning>High gain amplification 30X.
+				</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>bad_image</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.bad_image</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Identifies image whose image data and FPE metadata are not reliable and should not be used for analysis.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>true</value>
+				<value_meaning>This is a bad image. Should not be used for analysis</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>false</value>
+				<value_meaning>This is not a bad image. Can be used for analysis.
+				</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>observation_type</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.observation_type</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Describes the purpose for which the image was taken.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>imaging_mode</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.imaging_mode</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			The imaging_mode defines the shutter readout mode of the DRACO detector.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>GLOBAL</value>
+				<value_meaning>In global shutter readout mode the entire detector
+					integrates over the same time period. Global shutter images will
+					have higher noise relative to rolling shutter images, but no
+					spatial distortion beyond that caused by the optics (less than or equal to 0.1%).
+				</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>ROLLING</value>
+				<value_meaning>In rolling shutter mode each row of the detector
+					integrates over the same amount of time, but the exact moment in
+					time captured by each line is different (i.e., each line begins integrating
+					by one line time after the previous line).
+				</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>lineread</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.lineread</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Defines the time it takes to readout a single line of the detector in microsec/line.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>readout_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.readout_time</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Defines the global readout time in microseconds.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>pix_delay</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.pix_delay</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Delay between sequential pixels in line in nanoseconds.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>current_analog_reset_supply</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.current_analog_reset_supply</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Current for detector analog reset supply.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Current</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>current_18vd_supply</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.current_18vd_supply</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Current for detector 1.8VD supply.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Current</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>current_33va_supply</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.current_33va_supply</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Current for detector 3.3VA supply.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Current</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>current_33vd_supply</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.current_33vd_supply</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Current for detector 3.3VD supply.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Current</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>liciacube_sclk_image_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.liciacube_sclk_image_time</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Start of image capture time in spacecraft clock notation.  Numeric number preceding the decimal
+			point is integer seconds.  Numeric number after the decimal point is subsecond clock ticks, 
+			where each tick represents TBD microseconds.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>correct_image_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.correct_image_time</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			UTC Time at mid exposure used to define attitude and representative geometric attributes.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>soc_acquisition_time</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.soc_acquisition_time</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			DRACO image time of validity calculated by the SOC based on FPE_SEC and
+			FPE_SBSS in the fits header. This way the SOC can calculate an 
+			estimated time of validity even when an image does not correlate to information
+			provided by GNC. See the DRACO SIS for information on how this value is calculated.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>test_pattern</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.test_pattern</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Flag to show if image is a test pattern. If it is then the value corresponds
+			to the test pattern used.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>test_temp</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.test_temp</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Nominal temperature for the test sequence used to generate 
+			the data product. Reported by the calibration files, 
+			i.e. flat fields, bias, and dark images.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window_x_start</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window_x_start</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Column where window starts with respect to a LICIACUBE image array.
+			The container identifies whether this is the LEIA or LUKE image array.
+			The LEIA image array is 2048 x 2048, the LUKE image array is 
+			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
+			Upper left hand corner is coordinate 0,0. 
+			Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window_x_end</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window_x_end</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Column where window ends with respect to a LICIACUBE image array.
+			The container identifies whether this is the LEIA or LUKE image array.
+			The LEIA image array is 2048 x 2048, the LUKE image array is 
+			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
+			Upper left hand corner is coordinate 0,0. 
+			Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+
+	<DD_Attribute>
+		<name>window_y_start</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window_y_start</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Row where window starts with respect to a LICIACUBE image array.
+			The container identifies whether this is the LEIA or LUKE image array.
+			The LEIA image array is 2048 x 2048, the LUKE image array is 
+			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
+			Upper left hand corner is coordinate 0,0. 
+			Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window_y_end</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window_y_end</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Row where window ends with respect to a LICIACUBE image array.
+			The container identifies whether this is the LEIA or LUKE image array.
+			The LEIA image array is 2048 x 2048, the LUKE image array is 
+			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
+			Upper left hand corner is coordinate 0,0. 
+			Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window2_x_start</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window2_x_start</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Starting column of windowed image data with respect to a 1024 x 1025 
+			image array, where the top row of the array is the header row containing
+			metadata associated with the image. Upper left hand corner is 
+			coordinate 0,0. Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window2_x_end</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window2_x_end</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Ending column of windowed image data with respect to a 1024 x 1025 
+			image array, where the top row of the array is the header row containing
+			metadata associated with the image. Upper left hand corner is coordinate
+			0,0. Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>1023</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window2_y_start</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window2_y_start</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Starting row of windowed image data with respect to a 1024 x 1025 
+			image array, where the top row of the array is the header row containing
+			metadata associated with the image. Upper left hand corner is coordinate
+			0,0. Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>512</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>window2_y_end</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.window2_y_end</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Ending row of windowed image data with respect to a 1024 x 1025 
+			image array, where the top row of the array is the header row containing
+			metadata associated with the image. Upper left hand corner is coordinate
+			0,0. Set to -1 if windowing is not applied.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>false</enumeration_flag>
+			<value_data_type>ASCII_Integer</value_data_type>
+			<minimum_value>-1</minimum_value>
+			<maximum_value>1024</maximum_value>			
+		</DD_Value_Domain>
+	</DD_Attribute>
+	
+	<DD_Attribute>
+		<name>undo_onboard_cal</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.undo_onboard_cal</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether on-board calibration table was undone, ie.
+			by adding it back to the image. NA if onboard_cal table was not 
+			applied to the image.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>UNDONE</value>
+				<value_meaning>Removed the onboard calibration table</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>NA</value>
+				<value_meaning>Onboard calibration not applied to the image</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>bias_subtraction</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.bias_subtraction</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS
+			keyword in the fits header for the name of the bias file used. This file is also 
+			archived in the DRACO Calibrated Data Collection.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>PERFORM</value>
+				<value_meaning>performed bias subtraction</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>SKIP</value>
+				<value_meaning>skipped bias subtraction</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>dark_subtraction</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.dark_subtraction</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether dark subtraction step was done. If performed then refer to the
+			REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark
+			files used. These files are also archived in the DRACO Calibrated Data Collection.
+			Also refer to the DRACO calibration pipeline description document
+			to see how the two files are utilized to interpolate temperature dependent dark currents.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>PERFORM</value>
+				<value_meaning>performed dark subtraction</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>SKIP</value>
+				<value_meaning>skipped dark subtraction</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>flatfield</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.flatfield</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether flat field was applied. If performed then refer
+			to the REFFLAT keyword in the fits header for the names of the 
+			flat field files used. This file is also archived in the DRACO Calibrated
+			Data Collection.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>PERFORM</value>
+				<value_meaning>applied flat field</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>SKIP</value>
+				<value_meaning>skipped flat field application</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>radiance_conversion</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.radiance_conversion</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether conversion to radiance was applied. If performed then
+			refer to the the DRACO calibration pipeline description document for the steps
+			performed to convert pixel values to electrons then from electrons to radiance.
+			The lookup table used to convert pixel values to electrons is stored in the LUPTABLE
+			keyword in the fits header along with the photometric keyword RDIDYMOS. 
+			The lookup table file is also archived in the DRACO Calibrated Data Collection.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>PERFORM</value>
+				<value_meaning>converted pixels to radiance values</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>SKIP</value>
+				<value_meaning>skipped conversion to radiance</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+
+	<DD_Attribute>
+		<name>ioverf_conversion</name>
+		<version_id>1.0</version_id>
+		<local_identifier>dart.ioverf_conversion</local_identifier>
+		<nillable_flag>false</nillable_flag>
+		<submitter_name>Raymond Espiritu</submitter_name>
+		<definition>
+			Indicates whether conversion to I/F was applied. If performed then
+			refer to the DRACO calibraiton pipeline description document for the steps
+			performed to convert pixel values to I/F. The F_SUN622 keyword in the fits
+			header contains the solar flux at 622nm (the DRACO pivot wavelength) as well
+			as the PHDIST and SHDIST keywords for the heliocentric distance to the primary and
+			secondary bodies respectively.
+		</definition>
+		<DD_Value_Domain>
+			<enumeration_flag>true</enumeration_flag>
+			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<DD_Permissible_Value>
+				<value>PERFORM</value>
+				<value_meaning>converted pixels to I/F values</value_meaning>
+			</DD_Permissible_Value>
+			<DD_Permissible_Value>
+				<value>SKIP</value>
+				<value_meaning>skipped conversion to I/F</value_meaning>
+			</DD_Permissible_Value>
+		</DD_Value_Domain>
+	</DD_Attribute>
+									
+  <DD_Class> 
+    <name>DART_Parameters</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.DART_Parameters</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The DART_Parameters class is the superclass containing all
+     DART mission data dictionary classes.</definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>true</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.mission_phase</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.Time</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.DRACO_Instrument_Attributes</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.LEIA_Instrument_Attributes</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.LUKE_Instrument_Attributes</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.DRACO_Data_Processing_Information</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+
+  <DD_Class> 
+    <name>Time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.Time</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The Time class contains metadata describing different
+     time components associated with the DART mission.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.acquisition_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.soc_acquisition_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.liciacube_sclk_image_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.correct_image_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <DD_Class> 
+    <name>DRACO_Instrument_Attributes</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.DRACO_Instrument_Attributes</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The DRACO_Instrument_Attributes class contains metadata
+      associated with the DRACO Instrument.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.imaging_mode</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.gain</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.bad_image</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.observation_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.lineread</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.pix_delay</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.exposure_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.test_pattern</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.binning</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window2_x_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window2_y_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window2_x_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window2_y_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.onboard_cal</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.calibration_file</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.badpix_invalidation_mode</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.detector1_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.detector2_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.fpe_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.current_18vd_supply</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.current_33va_supply</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.current_33vd_supply</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.current_analog_reset_supply</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.test_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class> 
+    <name>LEIA_Instrument_Attributes</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.LEIA_Instrument_Attributes</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The LEIA_Instrument_Attributes class contains metadata
+      associated with the LEIA Instrument on the LICIACube spacecraft.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.gain</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.readout_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.test_pattern</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.binning</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.detector_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_x_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_y_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_x_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_y_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class> 
+    <name>LUKE_Instrument_Attributes</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.LUKE_Instrument_Attributes</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The LUKE_Instrument_Attributes class contains metadata
+      associated with the LUKE Instrument on the LICIACube spacecraft.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.gain</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.readout_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.test_pattern</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.binning</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.detector_temp</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_x_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_y_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_x_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.window_y_end</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+    
+<DD_Class> 
+    <name>DRACO_Data_Processing_Information</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dart.DRACO_Data_Processing_Information</local_identifier>
+    <submitter_name>Raymond Espiritu</submitter_name>
+    <definition>The DRACO_data_processing_information class contains metadata
+      describing the processing steps performed on the image. The processing 
+      steps are listed in the same order executed by the data processing pipeline
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>  
+      <identifier_reference>dart.undo_onboard_cal</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.bias_subtraction</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.dark_subtraction</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.flatfield</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.radiance_conversion</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>  
+      <identifier_reference>dart.ioverf_conversion</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+</DD_Class>  
+
+</Ingest_LDD>
