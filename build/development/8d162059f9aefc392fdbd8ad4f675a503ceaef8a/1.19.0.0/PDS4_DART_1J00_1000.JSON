@@ -1,0 +1,2739 @@
+[
+  {
+    "dataDictionary": {
+      "Title": "PDS4 Data Dictionary" ,
+      "IM Version": "1.19.0.0" ,
+      "LDD Version": "1.0.0.0" ,
+      "Date": "2023-02-06T07:28:45" ,
+      "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
+      "namespaces": ["pds:", "dart:"] ,
+      "classDictionary": [
+        {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.DART_Parameters" ,
+            "title": "DART_Parameters" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The DART_Parameters class is the superclass containing all DART mission data dictionary classes."
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.mission_phase" ,
+                "title": "mission_phase" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DART_Parameters.dart.mission_phase"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.Time" ,
+                "title": "Time" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "classId": [
+                  "0001_NASA_PDS_1.dart.Time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.DRACO_Instrument_Attributes" ,
+                "title": "DRACO_Instrument_Attributes" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "classId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.LEIA_Instrument_Attributes" ,
+                "title": "LEIA_Instrument_Attributes" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "classId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.LUKE_Instrument_Attributes" ,
+                "title": "LUKE_Instrument_Attributes" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "classId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.DRACO_Data_Processing_Information" ,
+                "title": "DRACO_Data_Processing_Information" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "classId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information" ,
+            "title": "DRACO_Data_Processing_Information" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The DRACO_data_processing_information class contains metadata describing the processing steps performed on the image. The processing steps are listed in the same order executed by the data processing pipeline "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.undo_onboard_cal" ,
+                "title": "undo_onboard_cal" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.undo_onboard_cal"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.bias_subtraction" ,
+                "title": "bias_subtraction" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.bias_subtraction"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.dark_subtraction" ,
+                "title": "dark_subtraction" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.dark_subtraction"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.flatfield" ,
+                "title": "flatfield" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.flatfield"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.radiance_conversion" ,
+                "title": "radiance_conversion" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.radiance_conversion"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.ioverf_conversion" ,
+                "title": "ioverf_conversion" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.ioverf_conversion"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes" ,
+            "title": "DRACO_Instrument_Attributes" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The DRACO_Instrument_Attributes class contains metadata associated with the DRACO Instrument. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.imaging_mode" ,
+                "title": "imaging_mode" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.imaging_mode"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.gain" ,
+                "title": "gain" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.gain"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.bad_image" ,
+                "title": "bad_image" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.bad_image"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.observation_type" ,
+                "title": "observation_type" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.observation_type"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.lineread" ,
+                "title": "lineread" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.lineread"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.pix_delay" ,
+                "title": "pix_delay" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.pix_delay"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.exposure_time" ,
+                "title": "exposure_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1070" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.exposure_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_pattern" ,
+                "title": "test_pattern" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1080" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_pattern"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.binning" ,
+                "title": "binning" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1090" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.binning"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_start" ,
+                "title": "window2_x_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1100" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_start" ,
+                "title": "window2_y_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1110" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_end" ,
+                "title": "window2_x_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1120" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_end"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_end" ,
+                "title": "window2_y_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1130" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_end"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.onboard_cal" ,
+                "title": "onboard_cal" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1140" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.onboard_cal"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.calibration_file" ,
+                "title": "calibration_file" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1150" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.calibration_file"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.badpix_invalidation_mode" ,
+                "title": "badpix_invalidation_mode" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1160" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.badpix_invalidation_mode"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector1_temp" ,
+                "title": "detector1_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1170" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector1_temp"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector2_temp" ,
+                "title": "detector2_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1180" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector2_temp"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.fpe_temp" ,
+                "title": "fpe_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1190" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.fpe_temp"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_18vd_supply" ,
+                "title": "current_18vd_supply" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1200" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_18vd_supply"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33va_supply" ,
+                "title": "current_33va_supply" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1210" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33va_supply"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33vd_supply" ,
+                "title": "current_33vd_supply" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1220" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33vd_supply"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_analog_reset_supply" ,
+                "title": "current_analog_reset_supply" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1230" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_analog_reset_supply"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_temp" ,
+                "title": "test_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1240" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_temp"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes" ,
+            "title": "LEIA_Instrument_Attributes" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The LEIA_Instrument_Attributes class contains metadata associated with the LEIA Instrument on the LICIACube spacecraft. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.gain" ,
+                "title": "gain" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.gain"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.readout_time" ,
+                "title": "readout_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.readout_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.test_pattern" ,
+                "title": "test_pattern" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.test_pattern"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.binning" ,
+                "title": "binning" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.binning"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.detector_temp" ,
+                "title": "detector_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.detector_temp"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.liciacube_calibration_file" ,
+                "title": "liciacube_calibration_file" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.liciacube_calibration_file"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_start" ,
+                "title": "window_x_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1070" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_start" ,
+                "title": "window_y_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1080" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_end" ,
+                "title": "window_x_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1090" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_end"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_end" ,
+                "title": "window_y_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1100" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_end"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes" ,
+            "title": "LUKE_Instrument_Attributes" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The LUKE_Instrument_Attributes class contains metadata associated with the LUKE Instrument on the LICIACube spacecraft. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.gain" ,
+                "title": "gain" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.gain"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.readout_time" ,
+                "title": "readout_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.readout_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.test_pattern" ,
+                "title": "test_pattern" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.test_pattern"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.binning" ,
+                "title": "binning" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.binning"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.detector_temp" ,
+                "title": "detector_temp" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.detector_temp"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.liciacube_calibration_file" ,
+                "title": "liciacube_calibration_file" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.liciacube_calibration_file"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_start" ,
+                "title": "window_x_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1070" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_start" ,
+                "title": "window_y_start" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1080" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_start"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_end" ,
+                "title": "window_x_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1090" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_end"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_end" ,
+                "title": "window_y_end" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1100" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_end"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.dart.Time" ,
+            "title": "Time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The Time class contains metadata describing different time components associated with the DART mission. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.Time.dart.acquisition_time" ,
+                "title": "acquisition_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.Time.dart.acquisition_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.Time.dart.soc_acquisition_time" ,
+                "title": "soc_acquisition_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.Time.dart.soc_acquisition_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.Time.dart.liciacube_sclk_image_time" ,
+                "title": "liciacube_sclk_image_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.Time.dart.liciacube_sclk_image_time"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.dart.Time.dart.correct_image_time" ,
+                "title": "correct_image_time" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.dart.Time.dart.correct_image_time"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      ]
+    , "attributeDictionary": [
+        {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DART_Parameters.dart.mission_phase" ,
+            "title": "mission_phase" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " The mission_phase identifies the time period within the mission. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "approach" ,
+                  "valueMeaning": "The approach phase begins begins when the Didymos system is first acquired by DRACO, ~30 days before impact, and extends until the terminal phase begins. During this phase, DRACO acquires a long-range suite of observations where the Didymos system is mostly not resolvable. Light curve information complementary to ground-based observations will be extracted from these images." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "commissioning" ,
+                  "valueMeaning": "The commissioning phase lasts for TBD days after launch. Images acquired during this phase include calibrations and functional testing for DRACO to ensure proper operations. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "cruise" ,
+                  "valueMeaning": "The cruise phase begins after the commissioning phase and runs until the beginning of teh approach phase. Images acquired during this phase are used for several purposes, including for Optical navigation (OpNav), testing of SMART Nav algorithms, and star calibrations to characterize distortion and responsivity. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "final" ,
+                  "valueMeaning": "The final phase comprises the last ~4 min of the DART mission. During this phase, all DRACO images will be devoted to characterization of Dimorphos, as autonomous navingation will have been completed. In the baseline trajectory at ~20s (TBR after launch) prior to impact, DRACO achieves its requirement to image Dimorphos at a pixel scale of 66 cm. Higher resolution images will continue to be acquired in the final seconds of DART spacecraft operations, which end upon impact. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "prelaunch" ,
+                  "valueMeaning": "The prelaunch phase refers to the period of software development and testing of the data processing pipeline, before launch. Data products generated during this phase include calibration files created during the ground testing of the instrument as well as data products created for peer review." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "terminal" ,
+                  "valueMeaning": "The terminal phase begins with the initiation of DART's autonomous navigation, ~4 h prior to impact, and extends until the final phase begins. During this phase, the separation between Didymos and Dimorphos can be resolved, and DRACO images support both autonomous navigation (via Smart Nav algorithms) and characterization of Didymos and Dimorphos. The final image to contain both members of the system will be acquired ~4 minutes before impact, at a scale of ~7m. By the end of this phase, images will be obtained of Dimorphos that have a 2 x 2 binned pixel scale of ~3.5m. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.bias_subtraction" ,
+            "title": "bias_subtraction" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS keyword in the fits header for the name of the bias file used. This file is also archived in the DRACO Calibrated Data Collection. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "PERFORM" ,
+                  "valueMeaning": "performed bias subtraction" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SKIP" ,
+                  "valueMeaning": "skipped bias subtraction" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.dark_subtraction" ,
+            "title": "dark_subtraction" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether dark subtraction step was done. If performed then refer to the REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark files used. These files are also archived in the DRACO Calibrated Data Collection. Also refer to the DRACO calibration pipeline description document to see how the two files are utilized to interpolate temperature dependent dark currents. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "PERFORM" ,
+                  "valueMeaning": "performed dark subtraction" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SKIP" ,
+                  "valueMeaning": "skipped dark subtraction" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.flatfield" ,
+            "title": "flatfield" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether flat field was applied. If performed then refer to the REFFLAT keyword in the fits header for the names of the flat field files used. This file is also archived in the DRACO Calibrated Data Collection. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "PERFORM" ,
+                  "valueMeaning": "applied flat field" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SKIP" ,
+                  "valueMeaning": "skipped flat field application" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.ioverf_conversion" ,
+            "title": "ioverf_conversion" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether conversion to I\/F was applied. If performed then refer to the DRACO calibraiton pipeline description document for the steps performed to convert pixel values to I\/F. The F_SUN622 keyword in the fits header contains the solar flux at 622nm (the DRACO pivot wavelength) as well as the PHDIST and SHDIST keywords for the heliocentric distance to the primary and secondary bodies respectively. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "PERFORM" ,
+                  "valueMeaning": "converted pixels to I\/F values" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SKIP" ,
+                  "valueMeaning": "skipped conversion to I\/F" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.radiance_conversion" ,
+            "title": "radiance_conversion" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether conversion to radiance was applied. If performed then refer to the the DRACO calibration pipeline description document for the steps performed to convert pixel values to electrons then from electrons to radiance. The lookup table used to convert pixel values to electrons is stored in the LUPTABLE keyword in the fits header along with the photometric keyword RDIDYMOS. The lookup table file is also archived in the DRACO Calibrated Data Collection. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "PERFORM" ,
+                  "valueMeaning": "converted pixels to radiance values" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "SKIP" ,
+                  "valueMeaning": "skipped conversion to radiance" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Data_Processing_Information.dart.undo_onboard_cal" ,
+            "title": "undo_onboard_cal" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Indicates whether on-board calibration table was undone, ie. by adding it back to the image. NA if onboard_cal table was not applied to the image. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "NA" ,
+                  "valueMeaning": "Onboard calibration not applied to the image" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "UNDONE" ,
+                  "valueMeaning": "Removed the onboard calibration table" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.bad_image" ,
+            "title": "bad_image" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Identifies image whose image data and FPE metadata are not reliable and should not be used for analysis. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "false" ,
+                  "valueMeaning": "This is not a bad image. Can be used for analysis. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "true" ,
+                  "valueMeaning": "This is a bad image. Should not be used for analysis" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.badpix_invalidation_mode" ,
+            "title": "badpix_invalidation_mode" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "BYPASS" ,
+                  "valueMeaning": "Bad pixel map is not used to invalidate pixels." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "USE" ,
+                  "valueMeaning": "Bad pixels identified by bad pixel map are invalidated by SMARTNAV" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.binning" ,
+            "title": "binning" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Identifies whether pixel binning was applied to generate the image. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "OFF" ,
+                  "valueMeaning": "Binning not applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ON" ,
+                  "valueMeaning": "Binning applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.calibration_file" ,
+            "title": "calibration_file" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Name of calibration table file provided by SMART Nav to the spacecraft for use when onboard calibration is applied. Data values from this file are added back to the downloaded image if applied to the image on board. The file is stored on-board as a .mat file, but the same data values are archived in the DRACO Calibrated Data Collection as a .fits file. The archived filename is the same as the base filename shown here with the '.fits' extension. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_File_Name" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_File_Name" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_18vd_supply" ,
+            "title": "current_18vd_supply" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Current for detector 1.8VD supply. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Current" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Current" ,
+            "unitId": "A, mA" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33va_supply" ,
+            "title": "current_33va_supply" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Current for detector 3.3VA supply. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Current" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Current" ,
+            "unitId": "A, mA" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_33vd_supply" ,
+            "title": "current_33vd_supply" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Current for detector 3.3VD supply. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Current" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Current" ,
+            "unitId": "A, mA" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.current_analog_reset_supply" ,
+            "title": "current_analog_reset_supply" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Current for detector analog reset supply. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Current" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Current" ,
+            "unitId": "A, mA" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector1_temp" ,
+            "title": "detector1_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " DRACO detector temperature sensor 1. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.detector2_temp" ,
+            "title": "detector2_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " DRACO detector temperature sensor 2. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.exposure_time" ,
+            "title": "exposure_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Image exposure time in seconds. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Time" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Time" ,
+            "unitId": "day, hr, julian day, microseconds, min, ms, ns, s, yr" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.fpe_temp" ,
+            "title": "fpe_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " DRACO FPE board temperature. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.gain" ,
+            "title": "gain" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "10X" ,
+                  "valueMeaning": "High gain amplification 10X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1X" ,
+                  "valueMeaning": "Low gain amplification 1X." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2X" ,
+                  "valueMeaning": "Low gain amplification 2X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "30X" ,
+                  "valueMeaning": "High gain amplification 30X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.imaging_mode" ,
+            "title": "imaging_mode" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " The imaging_mode defines the shutter readout mode of the DRACO detector. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "GLOBAL" ,
+                  "valueMeaning": "In global shutter readout mode the entire detector integrates over the same time period. Global shutter images will have higher noise relative to rolling shutter images, but no spatial distortion beyond that caused by the optics (less than or equal to 0.1%). " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ROLLING" ,
+                  "valueMeaning": "In rolling shutter mode each row of the detector integrates over the same amount of time, but the exact moment in time captured by each line is different (i.e., each line begins integrating by one line time after the previous line). " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.lineread" ,
+            "title": "lineread" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the time it takes to readout a single line of the detector in microsec\/line. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.observation_type" ,
+            "title": "observation_type" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Describes the purpose for which the image was taken. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.onboard_cal" ,
+            "title": "onboard_cal" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "OFF" ,
+                  "valueMeaning": "Onboard calibration not applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ON" ,
+                  "valueMeaning": "Onboard calibration applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.pix_delay" ,
+            "title": "pix_delay" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Delay between sequential pixels in line in nanoseconds. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_pattern" ,
+            "title": "test_pattern" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Flag to show if image is a test pattern. If it is then the value corresponds to the test pattern used. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.test_temp" ,
+            "title": "test_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Nominal temperature for the test sequence used to generate the data product. Reported by the calibration files, i.e. flat fields, bias, and dark images. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_end" ,
+            "title": "window2_x_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "1023" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_x_start" ,
+            "title": "window2_x_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_end" ,
+            "title": "window2_y_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "1024" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.DRACO_Instrument_Attributes.dart.window2_y_start" ,
+            "title": "window2_y_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.binning" ,
+            "title": "binning" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Identifies whether pixel binning was applied to generate the image. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "OFF" ,
+                  "valueMeaning": "Binning not applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ON" ,
+                  "valueMeaning": "Binning applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.detector_temp" ,
+            "title": "detector_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Instrument detector temperature for LICIACube. The container class identifies whether it is for LUKE or LEIA. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.gain" ,
+            "title": "gain" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "10X" ,
+                  "valueMeaning": "High gain amplification 10X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1X" ,
+                  "valueMeaning": "Low gain amplification 1X." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2X" ,
+                  "valueMeaning": "Low gain amplification 2X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "30X" ,
+                  "valueMeaning": "High gain amplification 30X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.liciacube_calibration_file" ,
+            "title": "liciacube_calibration_file" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Name of calibration table file used by LICIACube calibration pipeline. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_File_Name" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_File_Name" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.readout_time" ,
+            "title": "readout_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the global readout time in microseconds. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.test_pattern" ,
+            "title": "test_pattern" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Flag to show if image is a test pattern. If it is then the value corresponds to the test pattern used. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_end" ,
+            "title": "window_x_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_x_start" ,
+            "title": "window_x_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_end" ,
+            "title": "window_y_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LEIA_Instrument_Attributes.dart.window_y_start" ,
+            "title": "window_y_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.binning" ,
+            "title": "binning" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Identifies whether pixel binning was applied to generate the image. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "OFF" ,
+                  "valueMeaning": "Binning not applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ON" ,
+                  "valueMeaning": "Binning applied" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.detector_temp" ,
+            "title": "detector_temp" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Instrument detector temperature for LICIACube. The container class identifies whether it is for LUKE or LEIA. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Temperature" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Temperature" ,
+            "unitId": "K, degC" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.gain" ,
+            "title": "gain" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "10X" ,
+                  "valueMeaning": "High gain amplification 10X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1X" ,
+                  "valueMeaning": "Low gain amplification 1X." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2X" ,
+                  "valueMeaning": "Low gain amplification 2X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "30X" ,
+                  "valueMeaning": "High gain amplification 30X. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.liciacube_calibration_file" ,
+            "title": "liciacube_calibration_file" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Name of calibration table file used by LICIACube calibration pipeline. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_File_Name" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_File_Name" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.readout_time" ,
+            "title": "readout_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Defines the global readout time in microseconds. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.test_pattern" ,
+            "title": "test_pattern" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Flag to show if image is a test pattern. If it is then the value corresponds to the test pattern used. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_end" ,
+            "title": "window_x_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_x_start" ,
+            "title": "window_x_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_end" ,
+            "title": "window_y_end" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.LUKE_Instrument_Attributes.dart.window_y_start" ,
+            "title": "window_y_start" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1" ,
+            "maximumValue": "512" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.Time.dart.acquisition_time" ,
+            "title": "acquisition_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation. This is the time for which the GNC attitude data is valid. See the DRACO SIS for calculation of this value. " ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.Time.dart.correct_image_time" ,
+            "title": "correct_image_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " UTC Time at mid exposure used to define attitude and representative geometric attributes. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.Time.dart.liciacube_sclk_image_time" ,
+            "title": "liciacube_sclk_image_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " Start of image capture time in spacecraft clock notation. Numeric number preceding the decimal point is integer seconds. Numeric number after the decimal point is subsecond clock ticks, where each tick represents TBD microseconds. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.dart.Time.dart.soc_acquisition_time" ,
+            "title": "soc_acquisition_time" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "dart" ,
+            "steward": "sbn" ,
+            "versionId": "1.19" ,
+            "description": " DRACO image time of validity calculated by the SOC based on FPE_SEC and FPE_SBSS in the fits header. This way the SOC can calculate an estimated time of validity even when an image does not correlate to information provided by GNC. See the DRACO SIS for information on how this value is calculated. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      ]
+    }
+  }
+]

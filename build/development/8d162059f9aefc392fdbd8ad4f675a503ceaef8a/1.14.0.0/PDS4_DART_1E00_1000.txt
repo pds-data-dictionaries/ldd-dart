@@ -1,0 +1,643 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        14.1.2
+   LDD Version Id:        1.0.0.0
+   LDD Label Version Id:  1.20
+   LDD Discipline (T/F):  false
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Mon Feb 06 15:28:56 UTC 2023
+   Common Schema          [PDS4_PDS_1E00.xsd]
+   Common Schematron      [PDS4_PDS_1E00.sch]
+   IM Version Id:         1.14.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.20
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Configuration File  [MDPTNConfigClassDisp.xml]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-dart/ldd-dart/src/DART_mission_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         false
+   Mission LDD            true
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                6
+   Attributes             42
+   Associations           60
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               DART Mission
+   LDD Version            1.0.0.0
+   Full Name              Raymond Espiritu
+   Steward                sbn
+   Namespace Id           dart
+   Comment                
+		This is the DART Mission local data dictionary setup file to be run on the 
+		PDS4 lddtool in order to create a local data dictionary.
+	
+   Last Modification Time 2021-02-11T23:00:00
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   acquisition_time
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation. This is the time for which the GNC attitude data is valid. See the DRACO SIS for calculation of this value. 
+   nillable               true
+
+   name                   badpix_invalidation_mode
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. 
+
+   name                   binning
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Identifies whether pixel binning was applied to generate the image. 
+
+   name                   calibration_file
+   version                1.14
+   value data type        ASCII_File_Name
+   description             Name of calibration table file provided by SMART Nav to the spacecraft for use when onboard calibration is applied. Data values from this file are added back to the downloaded image if applied to the image on board. The file is stored on-board as a .mat file, but the same data values are archived in the DRACO Calibrated Data Collection as a .fits file. The archived filename is the same as the base filename shown here with the '.fits' extension. 
+
+   name                   detector_temp
+   version                1.14
+   value data type        ASCII_Real
+   description             Instrument detector temperature for LICIACube. The container class identifies whether it is for LUKE or LEIA. 
+   unit of measure type   Units_of_Temperature
+
+   name                   detector1_temp
+   version                1.14
+   value data type        ASCII_Real
+   description             DRACO detector temperature sensor 1. 
+   unit of measure type   Units_of_Temperature
+
+   name                   detector2_temp
+   version                1.14
+   value data type        ASCII_Real
+   description             DRACO detector temperature sensor 2. 
+   unit of measure type   Units_of_Temperature
+
+   name                   fpe_temp
+   version                1.14
+   value data type        ASCII_Real
+   description             DRACO FPE board temperature. 
+   unit of measure type   Units_of_Temperature
+
+   name                   liciacube_calibration_file
+   version                1.14
+   value data type        ASCII_File_Name
+   description             Name of calibration table file used by LICIACube calibration pipeline. 
+
+   name                   onboard_cal
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. 
+
+   name                   mission_phase
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             The mission_phase identifies the time period within the mission. 
+
+   name                   exposure_time
+   version                1.14
+   value data type        ASCII_Real
+   description             Image exposure time in seconds. 
+   unit of measure type   Units_of_Time
+
+   name                   gain
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. 
+
+   name                   bad_image
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Identifies image whose image data and FPE metadata are not reliable and should not be used for analysis. 
+
+   name                   observation_type
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Describes the purpose for which the image was taken. 
+
+   name                   imaging_mode
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             The imaging_mode defines the shutter readout mode of the DRACO detector. 
+
+   name                   lineread
+   version                1.14
+   value data type        ASCII_Real
+   description             Defines the time it takes to readout a single line of the detector in microsec/line. 
+
+   name                   readout_time
+   version                1.14
+   value data type        ASCII_Real
+   description             Defines the global readout time in microseconds. 
+
+   name                   pix_delay
+   version                1.14
+   value data type        ASCII_Real
+   description             Delay between sequential pixels in line in nanoseconds. 
+
+   name                   current_analog_reset_supply
+   version                1.14
+   value data type        ASCII_Real
+   description             Current for detector analog reset supply. 
+   unit of measure type   Units_of_Current
+
+   name                   current_18vd_supply
+   version                1.14
+   value data type        ASCII_Real
+   description             Current for detector 1.8VD supply. 
+   unit of measure type   Units_of_Current
+
+   name                   current_33va_supply
+   version                1.14
+   value data type        ASCII_Real
+   description             Current for detector 3.3VA supply. 
+   unit of measure type   Units_of_Current
+
+   name                   current_33vd_supply
+   version                1.14
+   value data type        ASCII_Real
+   description             Current for detector 3.3VD supply. 
+   unit of measure type   Units_of_Current
+
+   name                   liciacube_sclk_image_time
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Start of image capture time in spacecraft clock notation. Numeric number preceding the decimal point is integer seconds. Numeric number after the decimal point is subsecond clock ticks, where each tick represents TBD microseconds. 
+
+   name                   correct_image_time
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             UTC Time at mid exposure used to define attitude and representative geometric attributes. 
+
+   name                   soc_acquisition_time
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             DRACO image time of validity calculated by the SOC based on FPE_SEC and FPE_SBSS in the fits header. This way the SOC can calculate an estimated time of validity even when an image does not correlate to information provided by GNC. See the DRACO SIS for information on how this value is calculated. 
+
+   name                   test_pattern
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Flag to show if image is a test pattern. If it is then the value corresponds to the test pattern used. 
+
+   name                   test_temp
+   version                1.14
+   value data type        ASCII_Real
+   description             Nominal temperature for the test sequence used to generate the data product. Reported by the calibration files, i.e. flat fields, bias, and dark images. 
+   unit of measure type   Units_of_Temperature
+
+   name                   window_x_start
+   version                1.14
+   value data type        ASCII_Integer
+   description             Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window_x_end
+   version                1.14
+   value data type        ASCII_Integer
+   description             Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window_y_start
+   version                1.14
+   value data type        ASCII_Integer
+   description             Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window_y_end
+   version                1.14
+   value data type        ASCII_Integer
+   description             Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window2_x_start
+   version                1.14
+   value data type        ASCII_Integer
+   description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window2_x_end
+   version                1.14
+   value data type        ASCII_Integer
+   description             Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          1023
+
+   name                   window2_y_start
+   version                1.14
+   value data type        ASCII_Integer
+   description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          512
+
+   name                   window2_y_end
+   version                1.14
+   value data type        ASCII_Integer
+   description             Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   minimum value          -1
+   maximum value          1024
+
+   name                   undo_onboard_cal
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether on-board calibration table was undone, ie. by adding it back to the image. NA if onboard_cal table was not applied to the image. 
+
+   name                   bias_subtraction
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS keyword in the fits header for the name of the bias file used. This file is also archived in the DRACO Calibrated Data Collection. 
+
+   name                   dark_subtraction
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether dark subtraction step was done. If performed then refer to the REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark files used. These files are also archived in the DRACO Calibrated Data Collection. Also refer to the DRACO calibration pipeline description document to see how the two files are utilized to interpolate temperature dependent dark currents. 
+
+   name                   flatfield
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether flat field was applied. If performed then refer to the REFFLAT keyword in the fits header for the names of the flat field files used. This file is also archived in the DRACO Calibrated Data Collection. 
+
+   name                   radiance_conversion
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether conversion to radiance was applied. If performed then refer to the the DRACO calibration pipeline description document for the steps performed to convert pixel values to electrons then from electrons to radiance. The lookup table used to convert pixel values to electrons is stored in the LUPTABLE keyword in the fits header along with the photometric keyword RDIDYMOS. The lookup table file is also archived in the DRACO Calibrated Data Collection. 
+
+   name                   ioverf_conversion
+   version                1.14
+   value data type        ASCII_Short_String_Preserved
+   description             Indicates whether conversion to I/F was applied. If performed then refer to the DRACO calibraiton pipeline description document for the steps performed to convert pixel values to I/F. The F_SUN622 keyword in the fits header contains the solar flux at 622nm (the DRACO pivot wavelength) as well as the PHDIST and SHDIST keywords for the heliocentric distance to the primary and secondary bodies respectively. 
+
+Parsed Input - Classes:
+
+   name                   DART_Parameters
+   description            The DART_Parameters class is the superclass containing all DART mission data dictionary classes.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.mission_phase
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.Time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      dart.DRACO_Instrument_Attributes
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      dart.LEIA_Instrument_Attributes
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      dart.LUKE_Instrument_Attributes
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      dart.DRACO_Data_Processing_Information
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+   name                   Time
+   description            The Time class contains metadata describing different time components associated with the DART mission. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.acquisition_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.soc_acquisition_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.liciacube_sclk_image_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.correct_image_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   DRACO_Instrument_Attributes
+   description            The DRACO_Instrument_Attributes class contains metadata associated with the DRACO Instrument. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.imaging_mode
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.gain
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.bad_image
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.observation_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.lineread
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.pix_delay
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.exposure_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.test_pattern
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.binning
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window2_x_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window2_y_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window2_x_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window2_y_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.onboard_cal
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.calibration_file
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.badpix_invalidation_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.detector1_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.detector2_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.fpe_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.current_18vd_supply
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.current_33va_supply
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.current_33vd_supply
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.current_analog_reset_supply
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.test_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   LEIA_Instrument_Attributes
+   description            The LEIA_Instrument_Attributes class contains metadata associated with the LEIA Instrument on the LICIACube spacecraft. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.gain
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.readout_time
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.test_pattern
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.binning
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.detector_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.liciacube_calibration_file
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_x_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_y_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_x_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_y_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   LUKE_Instrument_Attributes
+   description            The LUKE_Instrument_Attributes class contains metadata associated with the LUKE Instrument on the LICIACube spacecraft. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.gain
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.readout_time
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.test_pattern
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.binning
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.detector_temp
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.liciacube_calibration_file
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_x_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_y_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_x_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.window_y_end
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   DRACO_Data_Processing_Information
+   description            The DRACO_data_processing_information class contains metadata describing the processing steps performed on the image. The processing steps are listed in the same order executed by the data processing pipeline 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      dart.undo_onboard_cal
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.bias_subtraction
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.dark_subtraction
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.flatfield
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.radiance_conversion
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      dart.ioverf_conversion
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+End of Report
