@@ -14,7 +14,7 @@ Test (DART) mission namespace for those working with data from this mission.
   
 ----
 
-This guide present the major features of the namespace.
+This guide presents the major features of the namespace.
 
 ##################################################
 Overview of the DART Mission Dictionary
@@ -33,7 +33,7 @@ stewards.
 Organization of Classes and Attributes
 ##################################################
 
-The DART dictioanry has a single top-level class that must be used to 
+The DART dictionary has a single top-level class that must be used to 
 access any of the DART metadata classes. This class contains the 
 mission phase identifier, a *<dart:Time>* class for overall timing 
 information, and subclasses that are included as needed 
@@ -44,7 +44,7 @@ Top-Level Class: <dart:DART_Parameters>
 **************************************************
 
 The *<dart:DART_Parameters>* class acts as a wrapper for all other DART classes.
-It contains one required attribute, *<dart:mission_phase>* for the mission phase 
+It contains one required attribute - *<dart:mission_phase>* - for the mission phase 
 identification, and five optional
 classes used as appropriate for the specific data product.
 
@@ -58,7 +58,7 @@ The major subclasses of the *<dart:DART_Parameters>* class are:
 
 You can see a complete outline of the namespace under the
 :doc:`../detailed/outline` topic. Details of class and attribute definitions
-are provided as alphabetical lists in :doc:`../detailed/class-list` and
+are provided in the :doc:`../detailed/class-list` and
 :doc:`../detailed/attribute-list`, respectively.
 
 .. _time-class:
@@ -67,7 +67,7 @@ are provided as alphabetical lists in :doc:`../detailed/class-list` and
 Subclass: <dart:Time>
 **************************************************
 
-This class contains attributes the provide timing information for the observation.
+This class contains attributes that provide timing information for the observation.
 
 **Attributes:**
 

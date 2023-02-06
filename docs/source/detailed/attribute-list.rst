@@ -11,9 +11,9 @@ See the Alphabetical List of Classes for attribute definitions.
 acquisition_time
 **************************************************
 
-**Data Type:** String
-**Unit:** Seconds 
-**Note:** Nillable
+| **Data Type:** String
+| **Unit:** Seconds 
+| **Note:** Nillable
 
 DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation.
 This is the time for which the GNC attitude data is valid. See the DRACO SIS
@@ -23,8 +23,8 @@ for calculation of this value.
 bad_image
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *true*, *false*
+| **Data Type:** Enumerated
+| **Values:** *true*, *false*
 
 "True" identifies image whose image data and FPE metadata are not reliable and should not be used for analysis.
 
@@ -32,9 +32,9 @@ bad_image
 badpix_invalidation_mode
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *USE*, *BYPASS*
-**Unit:**
+| **Data Type:** Enumerated
+| **Values:** *USE*, *BYPASS*
+| **Unit:**
 
 lags whether bad pixels identified by the on-board bad pixel map are 
 invalidated by SMARTNAV. When invalidated the pixels in the raw image
@@ -44,8 +44,8 @@ are set to the SNAVFLAG value in the raw fits header.
 bais_subtraction
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *PERFORM*, *SKIP*
+| **Data Type:** Enumerated
+| **Values:** *PERFORM*, *SKIP*
 
 Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS
 keyword in the fits header for the name of the bias file used. This file is also 
@@ -55,8 +55,8 @@ archived in the DRACO Calibrated Data Collection.
 binning
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *ON*, *OFF*
+| **Data Type:** Enumerated
+| **Values:** *ON*, *OFF*
 
 Identifies whether pixel binning was applied to generate the image.
 
@@ -64,7 +64,7 @@ Identifies whether pixel binning was applied to generate the image.
 calibration_file
 **************************************************
 
-**Data Type:** ASCII_File_Name
+| **Data Type:** ASCII_File_Name
 
 Name of calibration table file provided by SMART Nav
 to the spacecraft for use when onboard calibration is applied. Data values
@@ -77,7 +77,7 @@ same as the base filename shown here with the '.fits' extension.
 correct_image_time
 **************************************************
 
-**Data Type:** ASCII_String
+| **Data Type:** ASCII_String
 
 UTC Time at mid exposure used to define attitude and representative geometric attributes.
 
@@ -85,8 +85,8 @@ UTC Time at mid exposure used to define attitude and representative geometric at
 current_18vd_supply
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Current
+| **Data Type:** ASCII_Real
+| **Units of:** Current
 
 Current for detector 1.8VD supply.
 
@@ -94,8 +94,8 @@ Current for detector 1.8VD supply.
 current_33va_supply
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Current
+| **Data Type:** ASCII_Real
+| **Units of:** Current
 
 Current for detector 3.3VA supply.
 
@@ -103,8 +103,8 @@ Current for detector 3.3VA supply.
 current_33vd_supply
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Current
+| **Data Type:** ASCII_Real
+| **Units of:** Current
 
 Current for detector 3.3VD supply.
 
@@ -112,8 +112,8 @@ Current for detector 3.3VD supply.
 current_analog_reset_supply
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Current
+| **Data Type:** ASCII_Real
+| **Units of:** Current
 
 Current for detector analog reset supply.
 
@@ -121,8 +121,8 @@ Current for detector analog reset supply.
 dark_subtraction
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *PERFORM*, *SKIP*
+| **Data Type:** Enumerated
+| **Values:** *PERFORM*, *SKIP*
 
 Indicates whether dark subtraction step was done. If performed then refer to the
 REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark
@@ -134,8 +134,8 @@ to see how the two files are utilized to interpolate temperature dependent dark 
 detector1_temp
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Temperature
+| **Data Type:** ASCII_Real
+| **Units of:** Temperature
 
 DRACO detector temperature sensor 1.
 
@@ -143,8 +143,8 @@ DRACO detector temperature sensor 1.
 detector2_temp
 **************************************************
 
-**Data Type:** ASCII_Real
-**Unit:** Temperature
+| **Data Type:** ASCII_Real
+| **Unit:** Temperature
 
 DRACO detector temperature sensor 2.
 
@@ -152,8 +152,8 @@ DRACO detector temperature sensor 2.
 detector_temp
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Temperature
+| **Data Type:** ASCII_Real
+| **Units of:** Temperature
 
 Instrument detector temperature for LICIACube. The 
 container class identifies whether it is for LUKE or LEIA.
@@ -162,8 +162,8 @@ container class identifies whether it is for LUKE or LEIA.
 exposure_time
 **************************************************
 
-**Data Type:** ASCII_Real
-**Unit:** Seconds
+| **Data Type:** ASCII_Real
+| **Unit:** Seconds
 
 Image exposure time in seconds.
 
@@ -171,8 +171,8 @@ Image exposure time in seconds.
 flatfield
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *PERFORM*, *SKIP*
+| **Data Type:** Enumerated
+| **Values:** *PERFORM*, *SKIP*
 
 Indicates whether flat field was applied. If performed then refer
 to the REFFLAT keyword in the fits header for the names of the 
@@ -183,8 +183,8 @@ Data Collection.
 fpe_temp
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Temperature
+| **Data Type:** ASCII_Real
+| **Units of:** Temperature
 
 DRACO FPE board temperature
 
@@ -192,8 +192,8 @@ DRACO FPE board temperature
 gain
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *1X*, *2X*, *10X*, *30X*
+| **Data Type:** Enumerated
+| **Values:** *1X*, *2X*, *10X*, *30X*
 
 Defines the detector gain setting used. The container class
 identifies whether this is for the DRACO, LUKE, or LEIA detectors.
@@ -202,8 +202,8 @@ identifies whether this is for the DRACO, LUKE, or LEIA detectors.
 imaging_mode
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *GLOBAL*, *ROLLING*
+| **Data Type:** Enumerated
+| **Values:** *GLOBAL*, *ROLLING*
 
 The imaging_mode defines the shutter readout mode of the DRACO detector.
 
@@ -211,8 +211,8 @@ The imaging_mode defines the shutter readout mode of the DRACO detector.
 ioverf_conversion
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *PERFORM*, *SKIP*
+| **Data Type:** Enumerated
+| **Values:** *PERFORM*, *SKIP*
 
 Indicates whether conversion to I/F was applied. If performed then
 refer to the DRACO calibraiton pipeline description document for the steps
@@ -225,7 +225,7 @@ secondary bodies respectively.
 liciacube_calibration_file
 **************************************************
 
-**Data Type:** ASCII_File_Name
+| **Data Type:** ASCII_File_Name
 
 Name of calibration table file used by LICIACube calibration pipeline.
 
@@ -233,7 +233,7 @@ Name of calibration table file used by LICIACube calibration pipeline.
 liciacube_sclk_image_time
 **************************************************
 
-**Data Type:** ASCII_String
+| **Data Type:** ASCII_String
 
 Start of image capture time in spacecraft clock notation.  Numeric number preceding the decimal
 point is integer seconds.  Numeric number after the decimal point is subsecond clock ticks, 
@@ -243,7 +243,7 @@ where each tick represents TBD microseconds.
 lineread
 **************************************************
 
-**Data Type:** ASCII_Real
+| **Data Type:** ASCII_Real
 
 Defines the time it takes to readout a single line of the detector in microsec/line.
 
@@ -251,8 +251,8 @@ Defines the time it takes to readout a single line of the detector in microsec/l
 mission_phase
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *prelaunch*, *commissioning*, *cruise*, *approach*, *terminal*, *final*
+| **Data Type:** Enumerated
+| **Values:** *prelaunch*, *commissioning*, *cruise*, *approach*, *terminal*, *final*
 
 The mission_phase identifies the time period within the mission.
 
@@ -260,7 +260,7 @@ The mission_phase identifies the time period within the mission.
 observation_type
 **************************************************
 
-**Data Type:** ASCII_String
+| **Data Type:** ASCII_String
 
 Describes the purpose for which the image was taken.
 
@@ -268,8 +268,8 @@ Describes the purpose for which the image was taken.
 onboard_cal
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *ON*, *OFF* 
+| **Data Type:** Enumerated
+| **Values:** *ON*, *OFF* 
 
 Defines whether calibration table was applied to the DRACO image
 onboard the DART spacecraft prior to downlink.
@@ -278,7 +278,7 @@ onboard the DART spacecraft prior to downlink.
 pix_delay
 **************************************************
 
-**Data Type:** ASCII_Real
+| **Data Type:** ASCII_Real
 
 Delay between sequential pixels in line in nanoseconds.
 
@@ -286,8 +286,8 @@ Delay between sequential pixels in line in nanoseconds.
 radiance_conversion
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *PERFORM*, *SKIP*
+| **Data Type:** Enumerated
+| **Values:** *PERFORM*, *SKIP*
 
 Indicates whether conversion to radiance was applied. If performed then
 refer to the the DRACO calibration pipeline description document for the steps
@@ -300,7 +300,7 @@ The lookup table file is also archived in the DRACO Calibrated Data Collection.
 readout_time
 **************************************************
 
-**Data Type:** ASCII_Real
+| **Data Type:** ASCII_Real
 
 Defines the time it takes to readout a single line of the detector in microsec/line.
 
@@ -308,7 +308,7 @@ Defines the time it takes to readout a single line of the detector in microsec/l
 soc_acquisition_time
 **************************************************
 
-**Data Type:** ASCII_String
+| **Data Type:** ASCII_String
 
 DRACO image time of validity calculated by the SOC based on FPE_SEC and
 FPE_SBSS in the fits header. This way the SOC can calculate an 
@@ -319,7 +319,7 @@ provided by GNC. See the DRACO SIS for information on how this value is calculat
 test_pattern
 **************************************************
 
-**Data Type:** ASCII_String
+| **Data Type:** ASCII_String
 
 Flag to show if image is a test pattern. If it is then the value corresponds
 to the test pattern used.
@@ -328,8 +328,8 @@ to the test pattern used.
 test_temp
 **************************************************
 
-**Data Type:** ASCII_Real
-**Units of:** Temperature
+| **Data Type:** ASCII_Real
+| **Units of:** Temperature
 
 Nominal temperature for the test sequence used to generate 
 the data product. Reported by the calibration files, 
@@ -339,8 +339,8 @@ i.e. flat fields, bias, and dark images.
 undo_onboard_cal
 **************************************************
 
-**Data Type:** Enumerated
-**Values:** *UNDONE*, *NA*
+| **Data Type:** Enumerated
+| **Values:** *UNDONE*, *NA*
 
 Indicates whether on-board calibration table was undone, ie.
 by adding it back to the image. NA if onboard_cal table was not 
@@ -350,8 +350,8 @@ applied to the image.
 window2_x_end
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 1023
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 1023
 
 Ending column of windowed image data with respect to a 1024 x 1025 
 image array, where the top row of the array is the header row containing
@@ -362,8 +362,8 @@ metadata associated with the image. Upper left hand corner is coordinate
 window2_x_start
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Starting column of windowed image data with respect to a 1024 x 1025 
 image array, where the top row of the array is the header row containing
@@ -374,8 +374,8 @@ coordinate 0,0. Set to -1 if windowing is not applied.
 window2_y_end
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 1024
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 1024
 
 Ending row of windowed image data with respect to a 1024 x 1025 
 image array, where the top row of the array is the header row containing
@@ -386,8 +386,8 @@ metadata associated with the image. Upper left hand corner is coordinate
 window2_y_start
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Starting row of windowed image data with respect to a 1024 x 1025 
 image array, where the top row of the array is the header row containing
@@ -398,8 +398,8 @@ metadata associated with the image. Upper left hand corner is coordinate
 window_x_end
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Column where window ends with respect to a LICIACUBE image array.
 The container identifies whether this is the LEIA or LUKE image array.
@@ -412,8 +412,8 @@ Set to -1 if windowing is not applied.
 window_x_start
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Column where window starts with respect to a LICIACUBE image array.
 The container identifies whether this is the LEIA or LUKE image array.
@@ -426,8 +426,8 @@ Set to -1 if windowing is not applied.
 window_y_end
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Row where window ends with respect to a LICIACUBE image array.
 The container identifies whether this is the LEIA or LUKE image array.
@@ -440,8 +440,8 @@ Set to -1 if windowing is not applied.
 window_y_start
 **************************************************
 
-**Data Type:** ASCII_Integer
-**Range:** -1 to 512
+| **Data Type:** ASCII_Integer
+| **Range:** -1 to 512
 
 Row where window starts with respect to a LICIACUBE image array.
 The container identifies whether this is the LEIA or LUKE image array.
