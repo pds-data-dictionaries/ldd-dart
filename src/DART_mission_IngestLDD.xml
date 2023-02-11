@@ -533,11 +533,13 @@
 		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
-			UTC Time at mid exposure used to define attitude and representative geometric attributes.
+			LICIACube keyword containing the UTC Time at mid exposure as measured from 
+			the effective time of aquisition. This is the reference time used
+			to generate the SPICE derived geometry values in the LICIACube fits header.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
-			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
+			<value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
 		</DD_Value_Domain>
 	</DD_Attribute>
 	
