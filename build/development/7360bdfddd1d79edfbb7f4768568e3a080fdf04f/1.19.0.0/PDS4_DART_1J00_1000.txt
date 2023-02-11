@@ -3,16 +3,16 @@ PDS4 Local Data Dictionary Processing Report
 Configuration:
    LDDTool Version        14.1.2
    LDD Version Id:        1.0.0.0
-   LDD Label Version Id:  1.20
+   LDD Label Version Id:  1.25
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Feb 06 15:28:56 UTC 2023
-   Common Schema          [PDS4_PDS_1E00.xsd]
-   Common Schematron      [PDS4_PDS_1E00.sch]
-   IM Version Id:         1.14.0.0
+   Time                   Sat Feb 11 19:34:05 UTC 2023
+   Common Schema          [PDS4_PDS_1J00.xsd]
+   Common Schematron      [PDS4_PDS_1J00.sch]
+   IM Version Id:         1.19.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.20
+   IM Label Version Id:   1.25
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -54,239 +54,240 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   acquisition_time
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation. This is the time for which the GNC attitude data is valid. See the DRACO SIS for calculation of this value. 
    nillable               true
 
    name                   badpix_invalidation_mode
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. 
 
    name                   binning
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Identifies whether pixel binning was applied to generate the image. 
 
    name                   calibration_file
-   version                1.14
+   version                1.19
    value data type        ASCII_File_Name
    description             Name of calibration table file provided by SMART Nav to the spacecraft for use when onboard calibration is applied. Data values from this file are added back to the downloaded image if applied to the image on board. The file is stored on-board as a .mat file, but the same data values are archived in the DRACO Calibrated Data Collection as a .fits file. The archived filename is the same as the base filename shown here with the '.fits' extension. 
 
    name                   detector_temp
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Instrument detector temperature for LICIACube. The container class identifies whether it is for LUKE or LEIA. 
    unit of measure type   Units_of_Temperature
 
    name                   detector1_temp
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 1. 
    unit of measure type   Units_of_Temperature
 
    name                   detector2_temp
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 2. 
    unit of measure type   Units_of_Temperature
 
    name                   fpe_temp
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             DRACO FPE board temperature. 
    unit of measure type   Units_of_Temperature
 
    name                   liciacube_calibration_file
-   version                1.14
+   version                1.19
    value data type        ASCII_File_Name
    description             Name of calibration table file used by LICIACube calibration pipeline. 
 
    name                   onboard_cal
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. 
 
    name                   mission_phase
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             The mission_phase identifies the time period within the mission. 
 
    name                   exposure_time
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Image exposure time in seconds. 
    unit of measure type   Units_of_Time
 
    name                   gain
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. 
 
    name                   bad_image
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Identifies image whose image data and FPE metadata are not reliable and should not be used for analysis. 
 
    name                   observation_type
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Describes the purpose for which the image was taken. 
 
    name                   imaging_mode
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             The imaging_mode defines the shutter readout mode of the DRACO detector. 
 
    name                   lineread
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Defines the time it takes to readout a single line of the detector in microsec/line. 
 
    name                   readout_time
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Defines the global readout time in microseconds. 
 
    name                   pix_delay
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Delay between sequential pixels in line in nanoseconds. 
+   unit of measure type   Units_of_Time
 
    name                   current_analog_reset_supply
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Current for detector analog reset supply. 
    unit of measure type   Units_of_Current
 
    name                   current_18vd_supply
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Current for detector 1.8VD supply. 
    unit of measure type   Units_of_Current
 
    name                   current_33va_supply
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VA supply. 
    unit of measure type   Units_of_Current
 
    name                   current_33vd_supply
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VD supply. 
    unit of measure type   Units_of_Current
 
    name                   liciacube_sclk_image_time
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Start of image capture time in spacecraft clock notation. Numeric number preceding the decimal point is integer seconds. Numeric number after the decimal point is subsecond clock ticks, where each tick represents TBD microseconds. 
 
    name                   correct_image_time
-   version                1.14
-   value data type        ASCII_Short_String_Preserved
-   description             UTC Time at mid exposure used to define attitude and representative geometric attributes. 
+   version                1.19
+   value data type        ASCII_Date_Time_YMD_UTC
+   description             LICIACube keyword containing the UTC Time at mid exposure as measured from the effective time of aquisition. This is the reference time used to generate the SPICE derived geometry values in the LICIACube fits header. 
 
    name                   soc_acquisition_time
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             DRACO image time of validity calculated by the SOC based on FPE_SEC and FPE_SBSS in the fits header. This way the SOC can calculate an estimated time of validity even when an image does not correlate to information provided by GNC. See the DRACO SIS for information on how this value is calculated. 
+   description             DRACO image time of validity calculated by the SOC based on FPE_SEC and FPE_SBSS in the fits header. Represented as ascii integers in "sec:subsecond_ticks" where "sec" is the spacecraft clock counter in whole seconds since epoch and "subsecond_ticks" are in spacecraft clock subsecond clock ticks. Each tick represents 1/50,000 second. Example: "298271898:2345" 
 
    name                   test_pattern
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             Flag to show if image is a test pattern. If it is then the value corresponds to the test pattern used. 
+   description             If present it describes the test pattern in the image. If there is no test pattern then this keyword will not appear in the label. 
 
    name                   test_temp
-   version                1.14
+   version                1.19
    value data type        ASCII_Real
    description             Nominal temperature for the test sequence used to generate the data product. Reported by the calibration files, i.e. flat fields, bias, and dark images. 
    unit of measure type   Units_of_Temperature
 
    name                   window_x_start
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window_x_end
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window_y_start
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window_y_end
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window2_x_start
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window2_x_end
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          1023
 
    name                   window2_y_start
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          512
 
    name                   window2_y_end
-   version                1.14
+   version                1.19
    value data type        ASCII_Integer
    description             Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
    maximum value          1024
 
    name                   undo_onboard_cal
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether on-board calibration table was undone, ie. by adding it back to the image. NA if onboard_cal table was not applied to the image. 
 
    name                   bias_subtraction
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS keyword in the fits header for the name of the bias file used. This file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   dark_subtraction
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether dark subtraction step was done. If performed then refer to the REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark files used. These files are also archived in the DRACO Calibrated Data Collection. Also refer to the DRACO calibration pipeline description document to see how the two files are utilized to interpolate temperature dependent dark currents. 
 
    name                   flatfield
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether flat field was applied. If performed then refer to the REFFLAT keyword in the fits header for the names of the flat field files used. This file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   radiance_conversion
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether conversion to radiance was applied. If performed then refer to the the DRACO calibration pipeline description document for the steps performed to convert pixel values to electrons then from electrons to radiance. The lookup table used to convert pixel values to electrons is stored in the LUPTABLE keyword in the fits header along with the photometric keyword RDIDYMOS. The lookup table file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   ioverf_conversion
-   version                1.14
+   version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether conversion to I/F was applied. If performed then refer to the DRACO calibraiton pipeline description document for the steps performed to convert pixel values to I/F. The F_SUN622 keyword in the fits header contains the solar flux at 622nm (the DRACO pivot wavelength) as well as the PHDIST and SHDIST keywords for the heliocentric distance to the primary and secondary bodies respectively. 
 
