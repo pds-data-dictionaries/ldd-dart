@@ -552,8 +552,10 @@
 		<definition>
 			DRACO image time of validity calculated by the SOC based on FPE_SEC and
 			FPE_SBSS in the fits header. This way the SOC can calculate an 
-			estimated time of validity even when an image does not correlate to information
-			provided by GNC. See the DRACO SIS for information on how this value is calculated.
+			FPE_SBSS in the fits header. Represented as ascii integers in "sec:subsecond_ticks"
+			where "sec" is the spacecraft clock counter in whole seconds since epoch and 
+			"subsecond_ticks" are in spacecraft clock subsecond clock ticks. Each tick represents
+			1/50,000 second. Example: "298271898:2345" 
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
