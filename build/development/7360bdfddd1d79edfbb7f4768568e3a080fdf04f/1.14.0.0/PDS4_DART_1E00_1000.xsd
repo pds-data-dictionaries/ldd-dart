@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Mon Feb 06 15:28:56 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Sat Feb 11 19:34:06 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -108,6 +108,7 @@
     <!-- <xs:assert test="dart:imaging_mode = ('GLOBAL', 'ROLLING')"/> -->
     <!-- <xs:assert test="dart:gain = ('10X', '1X', '2X', '30X')"/> -->
     <!-- <xs:assert test="dart:bad_image = ('false', 'true')"/> -->
+    <!-- <xs:assert test="dart:test_pattern = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')"/> -->
     <!-- <xs:assert test="dart:binning = ('OFF', 'ON')"/> -->
     <!-- <xs:assert test="dart:onboard_cal = ('OFF', 'ON')"/> -->
     <!-- <xs:assert test="dart:badpix_invalidation_mode = ('BYPASS', 'USE')"/> -->
@@ -134,6 +135,7 @@
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="dart:gain = ('10X', '1X', '2X', '30X')"/> -->
+    <!-- <xs:assert test="dart:test_pattern = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')"/> -->
     <!-- <xs:assert test="dart:binning = ('OFF', 'ON')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
@@ -158,6 +160,7 @@
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="dart:gain = ('10X', '1X', '2X', '30X')"/> -->
+    <!-- <xs:assert test="dart:test_pattern = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')"/> -->
     <!-- <xs:assert test="dart:binning = ('OFF', 'ON')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
@@ -268,13 +271,13 @@
 
   <xs:simpleType name="correct_image_time">
     <xs:annotation>
-      <xs:documentation> UTC Time at mid exposure used to define
-        attitude and representative geometric attributes.
-        </xs:documentation>
+      <xs:documentation> LICIACube keyword containing the UTC Time at
+        mid exposure as measured from the effective time of aquisition.
+        This is the reference time used to generate the SPICE derived
+        geometry values in the LICIACube fits header. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -591,16 +594,24 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="pix_delay">
-    <xs:annotation>
-      <xs:documentation> Delay between sequential pixels in line in
-        nanoseconds. </xs:documentation>
-    </xs:annotation>
+  <xs:simpleType name="pix_delay_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="pix_delay">
+    <xs:annotation>
+      <xs:documentation> Delay between sequential pixels in line in
+        nanoseconds. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="dart:pix_delay_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="radiance_conversion">
     <xs:annotation>
@@ -634,11 +645,12 @@
   <xs:simpleType name="soc_acquisition_time">
     <xs:annotation>
       <xs:documentation> DRACO image time of validity calculated by the
-        SOC based on FPE_SEC and FPE_SBSS in the fits header. This way
-        the SOC can calculate an estimated time of validity even when an
-        image does not correlate to information provided by GNC. See the
-        DRACO SIS for information on how this value is calculated.
-        </xs:documentation>
+        SOC based on FPE_SEC and FPE_SBSS in the fits header.
+        Represented as ascii integers in "sec:subsecond_ticks" where
+        "sec" is the spacecraft clock counter in whole seconds since
+        epoch and "subsecond_ticks" are in spacecraft clock subsecond
+        clock ticks. Each tick represents 1/50,000 second. Example:
+        "298271898:2345" </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Preserved">
      <xs:minLength value="1"/>
@@ -648,9 +660,9 @@
 
   <xs:simpleType name="test_pattern">
     <xs:annotation>
-      <xs:documentation> Flag to show if image is a test pattern. If it
-        is then the value corresponds to the test pattern used.
-        </xs:documentation>
+      <xs:documentation> If present it describes the test pattern in the
+        image. If there is no test pattern then this keyword will not
+        appear in the label. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Preserved">
      <xs:minLength value="1"/>
