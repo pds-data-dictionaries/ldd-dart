@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Mon Feb 06 15:28:56 UTC 2023 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Sat Feb 11 19:34:05 UTC 2023 -->
+  <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -132,9 +132,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:exposure_time">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr')">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>dart:DRACO_Instrument_Attributes/dart:exposure_time/dart:exposure_time</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -166,6 +166,20 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="dart:DRACO_Instrument_Attributes/dart:pix_delay">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
+        <title>dart:DRACO_Instrument_Attributes/dart:pix_delay/dart:pix_delay</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="dart:DRACO_Instrument_Attributes/dart:test_pattern">
+      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+        <title>dart:DRACO_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
+        The attribute dart:DRACO_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:test_temp">
       <sch:assert test="@unit = ('K', 'degC')">
         <title>dart:DRACO_Instrument_Attributes/dart:test_temp/dart:test_temp</title>
@@ -194,6 +208,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="dart:LEIA_Instrument_Attributes/dart:test_pattern">
+      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+        <title>dart:LEIA_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
+        The attribute dart:LEIA_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="dart:LUKE_Instrument_Attributes/dart:binning">
       <sch:assert test=". = ('OFF', 'ON')">
         <title>dart:LUKE_Instrument_Attributes/dart:binning/dart:binning</title>
@@ -212,6 +233,13 @@
       <sch:assert test=". = ('10X', '1X', '2X', '30X')">
         <title>dart:LUKE_Instrument_Attributes/dart:gain/dart:gain</title>
         The attribute dart:LUKE_Instrument_Attributes/dart:gain must be equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="dart:LUKE_Instrument_Attributes/dart:test_pattern">
+      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+        <title>dart:LUKE_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
+        The attribute dart:LUKE_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
