@@ -3,8 +3,8 @@
 The DART dictionary provides classes and attributes containing detailed metadata for
 data products resulting from the DART planetary defense mission.
 
-### Steward
-Ray Espiritu (APL) and Anne Raugh (@acraugh), SBN
+### Stewards
+Ray Espiritu (@RayEspiritu), APL and Anne Raugh (@acraugh), SBN
 
 # Documentation
 
