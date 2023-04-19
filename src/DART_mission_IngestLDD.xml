@@ -815,8 +815,8 @@
 		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
-			Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS
-			keyword in the fits header for the name of the bias file used. This file is also 
+			Indicates whether bias subtraction step was done. If performed, then refer to the
+			Reference_List in the XML for the LID of the bias file used. The bias subtraction file is also 
 			archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -841,10 +841,8 @@
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Indicates whether dark subtraction step was done. If performed then refer to the
-			REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark
-			files used. These files are also archived in the DRACO Calibrated Data Collection.
-			Also refer to the DRACO calibration pipeline description document
-			to see how the two files are utilized to interpolate temperature dependent dark currents.
+			Reference_List in the XML for the LID of the dark file used. The dark subtraction file
+			is also archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>true</enumeration_flag>
@@ -868,8 +866,8 @@
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Indicates whether flat field was applied. If performed then refer
-			to the REFFLAT keyword in the fits header for the names of the 
-			flat field files used. This file is also archived in the DRACO Calibrated
+			to the Reference_List in the XML for the LID of the flat field file used. 
+			The flat field file is also archived in the DRACO Calibrated
 			Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -896,8 +894,8 @@
 			Indicates whether conversion to radiance was applied. If performed then
 			refer to the the DRACO calibration pipeline description document for the steps
 			performed to convert pixel values to electrons then from electrons to radiance.
-			The lookup table used to convert pixel values to electrons is stored in the LUPTABLE
-			keyword in the fits header along with the photometric keyword RDIDYMOS. 
+			If performed then refer to the Reference_List in the XML for the LID of the
+			lookup table used. 
 			The lookup table file is also archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -941,7 +939,7 @@
 			</DD_Permissible_Value>
 		</DD_Value_Domain>
 	</DD_Attribute>
-									
+								
   <DD_Class> 
     <name>DART_Parameters</name>
     <version_id>1.0</version_id>
