@@ -143,6 +143,7 @@
 		<name>detector2_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.detector2_temp</local_identifier>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO detector temperature sensor 2.
