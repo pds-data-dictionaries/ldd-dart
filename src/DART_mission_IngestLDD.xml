@@ -533,9 +533,9 @@
 		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
-			LICIACube keyword containing the UTC Time at mid exposure as measured from 
-			the effective time of aquisition. This is the reference time used
-			to generate the SPICE derived geometry values in the LICIACube fits header.
+            LICIACube keyword containing the UTC Time at mid exposure as measured from 
+			the effective time of acquisition. This is the reference time used
+			to generate the SPICE derived geometry values in the LICIACube fits header
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
@@ -713,7 +713,8 @@
 			Starting column of windowed image data with respect to a 1024 x 1025 
 			image array, where the top row of the array is the header row containing
 			metadata associated with the image. Upper left hand corner is 
-			coordinate 0,0. Set to -1 if windowing is not applied.
+			coordinate 0,0. Look at value of window2_x_end to determine whether
+			windowing is applied.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
@@ -753,7 +754,7 @@
 			Starting row of windowed image data with respect to a 1024 x 1025 
 			image array, where the top row of the array is the header row containing
 			metadata associated with the image. Upper left hand corner is coordinate
-			0,0. Set to -1 if windowing is not applied.
+			0,0. Look at value of window2_y_end to determine whether windowing is applied.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
