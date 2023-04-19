@@ -573,7 +573,7 @@
 			If present it describes the test pattern in the image. If there is no test pattern
 			then this keyword will not appear in the label.
 		</definition>
-		<DD_Value_Domain>
+        <DD_Value_Domain>
 			<enumeration_flag>true</enumeration_flag>
 			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
 			<DD_Permissible_Value>
