@@ -719,7 +719,7 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
-			<minimum_value>-1</minimum_value>
+			<minimum_value>0</minimum_value>
 			<maximum_value>512</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
@@ -740,7 +740,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>1023</maximum_value>			
+			<maximum_value>1024</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -759,8 +759,8 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
-			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<minimum_value>0</minimum_value>
+			<maximum_value>513</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -780,7 +780,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>1024</maximum_value>			
+			<maximum_value>1025</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 	
