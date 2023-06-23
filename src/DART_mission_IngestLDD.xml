@@ -540,7 +540,7 @@
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
-			<value_data_type>SCII_Date_Time_YMD_UTC</value_data_type>
+			<value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
 		</DD_Value_Domain>
 	</DD_Attribute>
 	
