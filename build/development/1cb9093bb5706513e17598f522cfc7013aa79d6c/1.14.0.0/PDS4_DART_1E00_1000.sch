@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Sat Feb 11 19:34:06 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Fri Jun 23 13:21:58 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -62,9 +62,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal">
-      <sch:assert test=". = ('NA', 'UNDONE')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('NA', 'UNDONE')))) then false() else true()">
         <title>dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal/dart:undo_onboard_cal</title>
-        The attribute dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal must be equal to one of the following values 'NA', 'UNDONE'.</sch:assert>
+        The attribute dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal must be nulled or equal to one of the following values 'NA', 'UNDONE'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -76,16 +76,16 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode">
-      <sch:assert test=". = ('BYPASS', 'USE')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('BYPASS', 'USE')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode/dart:badpix_invalidation_mode</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode must be equal to one of the following values 'BYPASS', 'USE'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode must be nulled or equal to one of the following values 'BYPASS', 'USE'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:binning">
-      <sch:assert test=". = ('OFF', 'ON')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -146,16 +146,23 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:gain">
-      <sch:assert test=". = ('10X', '1X', '2X', '30X')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('10X', '1X', '2X', '30X')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:gain/dart:gain</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:gain must be equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:gain must be nulled or equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:imaging_mode">
-      <sch:assert test=". = ('GLOBAL', 'ROLLING')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('GLOBAL', 'ROLLING')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:imaging_mode/dart:imaging_mode</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:imaging_mode must be equal to one of the following values 'GLOBAL', 'ROLLING'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:imaging_mode must be nulled or equal to one of the following values 'GLOBAL', 'ROLLING'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="dart:DRACO_Instrument_Attributes/dart:lineread">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr')">
+        <title>dart:DRACO_Instrument_Attributes/dart:lineread/dart:lineread</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -174,9 +181,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:test_pattern">
-      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:test_pattern must be nulled or equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -188,9 +195,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LEIA_Instrument_Attributes/dart:binning">
-      <sch:assert test=". = ('OFF', 'ON')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
         <title>dart:LEIA_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:LEIA_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:LEIA_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -202,23 +209,23 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LEIA_Instrument_Attributes/dart:gain">
-      <sch:assert test=". = ('10X', '1X', '2X', '30X')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('10X', '1X', '2X', '30X')))) then false() else true()">
         <title>dart:LEIA_Instrument_Attributes/dart:gain/dart:gain</title>
-        The attribute dart:LEIA_Instrument_Attributes/dart:gain must be equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
+        The attribute dart:LEIA_Instrument_Attributes/dart:gain must be nulled or equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LEIA_Instrument_Attributes/dart:test_pattern">
-      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')))) then false() else true()">
         <title>dart:LEIA_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
-        The attribute dart:LEIA_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
+        The attribute dart:LEIA_Instrument_Attributes/dart:test_pattern must be nulled or equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LUKE_Instrument_Attributes/dart:binning">
-      <sch:assert test=". = ('OFF', 'ON')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
         <title>dart:LUKE_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:LUKE_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:LUKE_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -230,16 +237,16 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LUKE_Instrument_Attributes/dart:gain">
-      <sch:assert test=". = ('10X', '1X', '2X', '30X')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('10X', '1X', '2X', '30X')))) then false() else true()">
         <title>dart:LUKE_Instrument_Attributes/dart:gain/dart:gain</title>
-        The attribute dart:LUKE_Instrument_Attributes/dart:gain must be equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
+        The attribute dart:LUKE_Instrument_Attributes/dart:gain must be nulled or equal to one of the following values '10X', '1X', '2X', '30X'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LUKE_Instrument_Attributes/dart:test_pattern">
-      <sch:assert test=". = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX')))) then false() else true()">
         <title>dart:LUKE_Instrument_Attributes/dart:test_pattern/dart:test_pattern</title>
-        The attribute dart:LUKE_Instrument_Attributes/dart:test_pattern must be equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
+        The attribute dart:LUKE_Instrument_Attributes/dart:test_pattern must be nulled or equal to one of the following values 'DYNAHORZ', 'FLAT', 'STATHORZ', 'TWOBOX'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

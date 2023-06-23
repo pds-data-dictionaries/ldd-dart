@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Sat Feb 11 19:34:06 UTC 2023 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Fri Jun 23 13:21:55 UTC 2023 -->
+  <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.14.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.19.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.0.0.0 - dart: - DART Mission                                            -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -15,7 +15,7 @@
     attributeFormDefault="unqualified"
     version="1.0.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -55,7 +55,7 @@
         executed by the data processing pipeline </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="undo_onboard_cal" type="dart:undo_onboard_cal" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="undo_onboard_cal" nillable="true" type="dart:undo_onboard_cal" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="bias_subtraction" type="dart:bias_subtraction" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="dark_subtraction" type="dart:dark_subtraction" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="flatfield" type="dart:flatfield" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -79,29 +79,29 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="imaging_mode" type="dart:imaging_mode" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="gain" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="imaging_mode" nillable="true" type="dart:imaging_mode" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="gain" nillable="true" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="bad_image" type="dart:bad_image" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="observation_type" type="dart:observation_type" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="lineread" type="dart:lineread" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="pix_delay" type="dart:pix_delay" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="exposure_time" type="dart:exposure_time" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="test_pattern" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="binning" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="window2_x_start" type="dart:window2_x_start" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="window2_y_start" type="dart:window2_y_start" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="window2_x_end" type="dart:window2_x_end" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="window2_y_end" type="dart:window2_y_end" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_time" nillable="true" type="dart:exposure_time" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="test_pattern" nillable="true" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="binning" nillable="true" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="window2_x_start" nillable="true" type="dart:window2_x_start" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="window2_y_start" nillable="true" type="dart:window2_y_start" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="window2_x_end" nillable="true" type="dart:window2_x_end" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="window2_y_end" nillable="true" type="dart:window2_y_end" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="onboard_cal" type="dart:onboard_cal" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_file" type="dart:calibration_file" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="badpix_invalidation_mode" type="dart:badpix_invalidation_mode" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="detector1_temp" type="dart:detector1_temp" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="detector2_temp" type="dart:detector2_temp" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="fpe_temp" type="dart:fpe_temp" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="current_18vd_supply" type="dart:current_18vd_supply" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="current_33va_supply" type="dart:current_33va_supply" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="current_33vd_supply" type="dart:current_33vd_supply" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="current_analog_reset_supply" type="dart:current_analog_reset_supply" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="badpix_invalidation_mode" nillable="true" type="dart:badpix_invalidation_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="detector1_temp" nillable="true" type="dart:detector1_temp" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="detector2_temp" nillable="true" type="dart:detector2_temp" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="fpe_temp" nillable="true" type="dart:fpe_temp" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="current_18vd_supply" nillable="true" type="dart:current_18vd_supply" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="current_33va_supply" nillable="true" type="dart:current_33va_supply" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="current_33vd_supply" nillable="true" type="dart:current_33vd_supply" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="current_analog_reset_supply" nillable="true" type="dart:current_analog_reset_supply" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="test_temp" type="dart:test_temp" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
@@ -122,10 +122,10 @@
         spacecraft. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="gain" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="gain" nillable="true" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="readout_time" type="dart:readout_time" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="test_pattern" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="binning" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="test_pattern" nillable="true" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="binning" nillable="true" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="detector_temp" type="dart:detector_temp" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="liciacube_calibration_file" type="dart:liciacube_calibration_file" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="window_x_start" type="dart:window_x_start" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -147,10 +147,10 @@
         spacecraft. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="gain" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="gain" nillable="true" type="dart:gain" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="readout_time" type="dart:readout_time" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="test_pattern" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="binning" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="test_pattern" nillable="true" type="dart:test_pattern" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="binning" nillable="true" type="dart:binning" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="detector_temp" type="dart:detector_temp" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="liciacube_calibration_file" type="dart:liciacube_calibration_file" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="window_x_start" type="dart:window_x_start" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -213,24 +213,25 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="badpix_invalidation_mode">
+  <xs:complexType name="badpix_invalidation_mode">
     <xs:annotation>
       <xs:documentation> Flags whether bad pixels identified by the
         on-board bad pixel map are invalidated by SMARTNAV. When
         invalidated the pixels in the raw image are set to the SNAVFLAG
         value in the raw fits header. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="bias_subtraction">
     <xs:annotation>
       <xs:documentation> Indicates whether bias subtraction step was
-        done. If performed, then refer to the REFBIAS keyword in the
-        fits header for the name of the bias file used. This file is
+        done. If performed, then refer to the Reference_List in the XML
+        for the LID of the bias file used. The bias subtraction file is
         also archived in the DRACO Calibrated Data Collection.
         </xs:documentation>
     </xs:annotation>
@@ -240,16 +241,17 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="binning">
+  <xs:complexType name="binning">
     <xs:annotation>
       <xs:documentation> Identifies whether pixel binning was applied to
         generate the image. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="calibration_file">
     <xs:annotation>
@@ -272,9 +274,9 @@
   <xs:simpleType name="correct_image_time">
     <xs:annotation>
       <xs:documentation> LICIACube keyword containing the UTC Time at
-        mid exposure as measured from the effective time of aquisition.
+        mid exposure as measured from the effective time of acquisition.
         This is the reference time used to generate the SPICE derived
-        geometry values in the LICIACube fits header. </xs:documentation>
+        geometry values in the LICIACube fits header </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
@@ -296,6 +298,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:current_18vd_supply_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Current" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -315,6 +318,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:current_33va_supply_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Current" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -334,6 +338,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:current_33vd_supply_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Current" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -353,6 +358,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:current_analog_reset_supply_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Current" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -360,12 +366,9 @@
   <xs:simpleType name="dark_subtraction">
     <xs:annotation>
       <xs:documentation> Indicates whether dark subtraction step was
-        done. If performed then refer to the REFDARK1 and REFDARK2
-        keywords in the fits header for the names of the dark files
-        used. These files are also archived in the DRACO Calibrated Data
-        Collection. Also refer to the DRACO calibration pipeline
-        description document to see how the two files are utilized to
-        interpolate temperature dependent dark currents.
+        done. If performed then refer to the Reference_List in the XML
+        for the LID of the dark file used. The dark subtraction file is
+        also archived in the DRACO Calibrated Data Collection.
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Preserved">
@@ -389,6 +392,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:detector1_temp_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Temperature" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -408,6 +412,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:detector2_temp_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Temperature" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -447,6 +452,7 @@
     <xs:simpleContent>
       <xs:extension base="dart:exposure_time_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -454,8 +460,8 @@
   <xs:simpleType name="flatfield">
     <xs:annotation>
       <xs:documentation> Indicates whether flat field was applied. If
-        performed then refer to the REFFLAT keyword in the fits header
-        for the names of the flat field files used. This file is also
+        performed then refer to the Reference_List in the XML for the
+        LID of the flat field file used. The flat field file is also
         archived in the DRACO Calibrated Data Collection.
         </xs:documentation>
     </xs:annotation>
@@ -479,32 +485,35 @@
     <xs:simpleContent>
       <xs:extension base="dart:fpe_temp_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Temperature" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="gain">
+  <xs:complexType name="gain">
     <xs:annotation>
       <xs:documentation> Defines the detector gain setting used. The
         container class identifies whether this is for the DRACO, LUKE,
         or LEIA detectors. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
-  <xs:simpleType name="imaging_mode">
+  <xs:complexType name="imaging_mode">
     <xs:annotation>
       <xs:documentation> The imaging_mode defines the shutter readout
         mode of the DRACO detector. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="ioverf_conversion">
     <xs:annotation>
@@ -549,16 +558,24 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="lineread">
-    <xs:annotation>
-      <xs:documentation> Defines the time it takes to readout a single
-        line of the detector in microsec/line. </xs:documentation>
-    </xs:annotation>
+  <xs:simpleType name="lineread_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="lineread">
+    <xs:annotation>
+      <xs:documentation> Defines the time it takes to readout a single
+        line of the detector in microsec/line. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="dart:lineread_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="mission_phase">
     <xs:annotation>
@@ -618,10 +635,9 @@
       <xs:documentation> Indicates whether conversion to radiance was
         applied. If performed then refer to the the DRACO calibration
         pipeline description document for the steps performed to convert
-        pixel values to electrons then from electrons to radiance. The
-        lookup table used to convert pixel values to electrons is stored
-        in the LUPTABLE keyword in the fits header along with the
-        photometric keyword RDIDYMOS. The lookup table file is also
+        pixel values to electrons then from electrons to radiance. If
+        performed then refer to the Reference_List in the XML for the
+        LID of the lookup table used. The lookup table file is also
         archived in the DRACO Calibrated Data Collection.
         </xs:documentation>
     </xs:annotation>
@@ -658,17 +674,18 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="test_pattern">
+  <xs:complexType name="test_pattern">
     <xs:annotation>
       <xs:documentation> If present it describes the test pattern in the
         image. If there is no test pattern then this keyword will not
         appear in the label. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="test_temp_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
@@ -690,20 +707,21 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="undo_onboard_cal">
+  <xs:complexType name="undo_onboard_cal">
     <xs:annotation>
       <xs:documentation> Indicates whether on-board calibration table
         was undone, ie. by adding it back to the image. NA if
         onboard_cal table was not applied to the image.
         </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
-  <xs:simpleType name="window2_x_end">
+  <xs:complexType name="window2_x_end">
     <xs:annotation>
       <xs:documentation> Ending column of windowed image data with
         respect to a 1024 x 1025 image array, where the top row of the
@@ -711,27 +729,30 @@
         image. Upper left hand corner is coordinate 0,0. Set to -1 if
         windowing is not applied. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-1"/>
-     <xs:maxInclusive value="1023"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
-  <xs:simpleType name="window2_x_start">
+  <xs:complexType name="window2_x_start">
     <xs:annotation>
       <xs:documentation> Starting column of windowed image data with
         respect to a 1024 x 1025 image array, where the top row of the
         array is the header row containing metadata associated with the
-        image. Upper left hand corner is coordinate 0,0. Set to -1 if
-        windowing is not applied. </xs:documentation>
+        image. Upper left hand corner is coordinate 0,0. Look at value
+        of window2_x_end to determine whether windowing is applied.
+        </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-1"/>
-     <xs:maxInclusive value="512"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
-  <xs:simpleType name="window2_y_end">
+  <xs:complexType name="window2_y_end">
     <xs:annotation>
       <xs:documentation> Ending row of windowed image data with respect
         to a 1024 x 1025 image array, where the top row of the array is
@@ -739,25 +760,28 @@
         Upper left hand corner is coordinate 0,0. Set to -1 if windowing
         is not applied. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-1"/>
-     <xs:maxInclusive value="1024"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
-  <xs:simpleType name="window2_y_start">
+  <xs:complexType name="window2_y_start">
     <xs:annotation>
       <xs:documentation> Starting row of windowed image data with
         respect to a 1024 x 1025 image array, where the top row of the
         array is the header row containing metadata associated with the
-        image. Upper left hand corner is coordinate 0,0. Set to -1 if
-        windowing is not applied. </xs:documentation>
+        image. Upper left hand corner is coordinate 0,0. Look at value
+        of window2_y_end to determine whether windowing is applied.
+        </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-1"/>
-     <xs:maxInclusive value="512"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="window_x_end">
     <xs:annotation>

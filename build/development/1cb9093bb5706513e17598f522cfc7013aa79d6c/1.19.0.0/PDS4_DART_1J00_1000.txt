@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.1.2
+   LDDTool Version        14.2.4
    LDD Version Id:        1.0.0.0
    LDD Label Version Id:  1.25
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Sat Feb 11 19:34:05 UTC 2023
+   Time                   Fri Jun 23 13:21:55 UTC 2023
    Common Schema          [PDS4_PDS_1J00.xsd]
    Common Schematron      [PDS4_PDS_1J00.sch]
    IM Version Id:         1.19.0.0
@@ -63,11 +63,13 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. 
+   nillable               true
 
    name                   binning
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Identifies whether pixel binning was applied to generate the image. 
+   nillable               true
 
    name                   calibration_file
    version                1.19
@@ -84,18 +86,21 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 1. 
+   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   detector2_temp
    version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 2. 
+   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   fpe_temp
    version                1.19
    value data type        ASCII_Real
    description             DRACO FPE board temperature. 
+   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   liciacube_calibration_file
@@ -117,12 +122,14 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             Image exposure time in seconds. 
+   nillable               true
    unit of measure type   Units_of_Time
 
    name                   gain
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Defines the detector gain setting used. The container class identifies whether this is for the DRACO, LUKE, or LEIA detectors. 
+   nillable               true
 
    name                   bad_image
    version                1.19
@@ -138,11 +145,13 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             The imaging_mode defines the shutter readout mode of the DRACO detector. 
+   nillable               true
 
    name                   lineread
    version                1.19
    value data type        ASCII_Real
    description             Defines the time it takes to readout a single line of the detector in microsec/line. 
+   unit of measure type   Units_of_Time
 
    name                   readout_time
    version                1.19
@@ -159,24 +168,28 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             Current for detector analog reset supply. 
+   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_18vd_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 1.8VD supply. 
+   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33va_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VA supply. 
+   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33vd_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VD supply. 
+   nillable               true
    unit of measure type   Units_of_Current
 
    name                   liciacube_sclk_image_time
@@ -187,7 +200,7 @@ Parsed Input - Attributes:
    name                   correct_image_time
    version                1.19
    value data type        ASCII_Date_Time_YMD_UTC
-   description             LICIACube keyword containing the UTC Time at mid exposure as measured from the effective time of aquisition. This is the reference time used to generate the SPICE derived geometry values in the LICIACube fits header. 
+   description             LICIACube keyword containing the UTC Time at mid exposure as measured from the effective time of acquisition. This is the reference time used to generate the SPICE derived geometry values in the LICIACube fits header 
 
    name                   soc_acquisition_time
    version                1.19
@@ -198,6 +211,7 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             If present it describes the test pattern in the image. If there is no test pattern then this keyword will not appear in the label. 
+   nillable               true
 
    name                   test_temp
    version                1.19
@@ -236,55 +250,60 @@ Parsed Input - Attributes:
    name                   window2_x_start
    version                1.19
    value data type        ASCII_Integer
-   description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   minimum value          -1
+   description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_x_end to determine whether windowing is applied. 
+   nillable               true
+   minimum value          0
    maximum value          512
 
    name                   window2_x_end
    version                1.19
    value data type        ASCII_Integer
    description             Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   nillable               true
    minimum value          -1
-   maximum value          1023
+   maximum value          1024
 
    name                   window2_y_start
    version                1.19
    value data type        ASCII_Integer
-   description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   minimum value          -1
-   maximum value          512
+   description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_y_end to determine whether windowing is applied. 
+   nillable               true
+   minimum value          0
+   maximum value          513
 
    name                   window2_y_end
    version                1.19
    value data type        ASCII_Integer
    description             Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   nillable               true
    minimum value          -1
-   maximum value          1024
+   maximum value          1025
 
    name                   undo_onboard_cal
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether on-board calibration table was undone, ie. by adding it back to the image. NA if onboard_cal table was not applied to the image. 
+   nillable               true
 
    name                   bias_subtraction
    version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS keyword in the fits header for the name of the bias file used. This file is also archived in the DRACO Calibrated Data Collection. 
+   description             Indicates whether bias subtraction step was done. If performed, then refer to the Reference_List in the XML for the LID of the bias file used. The bias subtraction file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   dark_subtraction
    version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             Indicates whether dark subtraction step was done. If performed then refer to the REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark files used. These files are also archived in the DRACO Calibrated Data Collection. Also refer to the DRACO calibration pipeline description document to see how the two files are utilized to interpolate temperature dependent dark currents. 
+   description             Indicates whether dark subtraction step was done. If performed then refer to the Reference_List in the XML for the LID of the dark file used. The dark subtraction file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   flatfield
    version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             Indicates whether flat field was applied. If performed then refer to the REFFLAT keyword in the fits header for the names of the flat field files used. This file is also archived in the DRACO Calibrated Data Collection. 
+   description             Indicates whether flat field was applied. If performed then refer to the Reference_List in the XML for the LID of the flat field file used. The flat field file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   radiance_conversion
    version                1.19
    value data type        ASCII_Short_String_Preserved
-   description             Indicates whether conversion to radiance was applied. If performed then refer to the the DRACO calibration pipeline description document for the steps performed to convert pixel values to electrons then from electrons to radiance. The lookup table used to convert pixel values to electrons is stored in the LUPTABLE keyword in the fits header along with the photometric keyword RDIDYMOS. The lookup table file is also archived in the DRACO Calibrated Data Collection. 
+   description             Indicates whether conversion to radiance was applied. If performed then refer to the the DRACO calibration pipeline description document for the steps performed to convert pixel values to electrons then from electrons to radiance. If performed then refer to the Reference_List in the XML for the LID of the lookup table used. The lookup table file is also archived in the DRACO Calibrated Data Collection. 
 
    name                   ioverf_conversion
    version                1.19
