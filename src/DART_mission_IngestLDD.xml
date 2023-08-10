@@ -190,7 +190,7 @@
 		<name>onboard_cal</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.onboard_cal</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Defines whether calibration table was applied to the DRACO image
@@ -789,7 +789,7 @@
 		<name>undo_onboard_cal</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.undo_onboard_cal</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Indicates whether on-board calibration table was undone, ie.
