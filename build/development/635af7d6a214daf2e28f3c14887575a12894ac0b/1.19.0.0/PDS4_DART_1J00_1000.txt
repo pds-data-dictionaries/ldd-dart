@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Jun 23 13:21:55 UTC 2023
+   Time                   Thu Aug 10 22:30:41 UTC 2023
    Common Schema          [PDS4_PDS_1J00.xsd]
    Common Schematron      [PDS4_PDS_1J00.sch]
    IM Version Id:         1.19.0.0
@@ -112,6 +112,7 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. 
+   nillable               true
 
    name                   mission_phase
    version                1.19
@@ -283,7 +284,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Indicates whether on-board calibration table was undone, ie. by adding it back to the image. NA if onboard_cal table was not applied to the image. 
-   nillable               true
 
    name                   bias_subtraction
    version                1.19

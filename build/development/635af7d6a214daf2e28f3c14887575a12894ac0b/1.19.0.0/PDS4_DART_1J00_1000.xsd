@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Fri Jun 23 13:21:55 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:dart  Version:1.0.0.0 - Thu Aug 10 22:30:41 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -55,7 +55,7 @@
         executed by the data processing pipeline </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="undo_onboard_cal" nillable="true" type="dart:undo_onboard_cal" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="undo_onboard_cal" type="dart:undo_onboard_cal" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="bias_subtraction" type="dart:bias_subtraction" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="dark_subtraction" type="dart:dark_subtraction" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="flatfield" type="dart:flatfield" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -92,7 +92,7 @@
       <xs:element name="window2_y_start" nillable="true" type="dart:window2_y_start" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="window2_x_end" nillable="true" type="dart:window2_x_end" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="window2_y_end" nillable="true" type="dart:window2_y_end" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="onboard_cal" type="dart:onboard_cal" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="onboard_cal" nillable="true" type="dart:onboard_cal" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_file" type="dart:calibration_file" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="badpix_invalidation_mode" nillable="true" type="dart:badpix_invalidation_mode" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="detector1_temp" nillable="true" type="dart:detector1_temp" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -599,17 +599,18 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="onboard_cal">
+  <xs:complexType name="onboard_cal">
     <xs:annotation>
       <xs:documentation> Defines whether calibration table was applied
         to the DRACO image onboard the DART spacecraft prior to
         downlink. </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Preserved">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Preserved">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="pix_delay_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
@@ -707,19 +708,18 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="undo_onboard_cal">
+  <xs:simpleType name="undo_onboard_cal">
     <xs:annotation>
       <xs:documentation> Indicates whether on-board calibration table
         was undone, ie. by adding it back to the image. NA if
         onboard_cal table was not applied to the image.
         </xs:documentation>
     </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="pds:ASCII_Short_String_Preserved">
-        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
+    <xs:restriction base="pds:ASCII_Short_String_Preserved">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
 
   <xs:complexType name="window2_x_end">
     <xs:annotation>

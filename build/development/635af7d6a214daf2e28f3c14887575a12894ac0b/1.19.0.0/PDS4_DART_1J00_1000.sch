@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Fri Jun 23 13:21:55 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Thu Aug 10 22:30:41 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -62,9 +62,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('NA', 'UNDONE')))) then false() else true()">
+      <sch:assert test=". = ('NA', 'UNDONE')">
         <title>dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal/dart:undo_onboard_cal</title>
-        The attribute dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal must be nulled or equal to one of the following values 'NA', 'UNDONE'.</sch:assert>
+        The attribute dart:DRACO_Data_Processing_Information/dart:undo_onboard_cal must be equal to one of the following values 'NA', 'UNDONE'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -167,9 +167,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:onboard_cal">
-      <sch:assert test=". = ('OFF', 'ON')">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:onboard_cal/dart:onboard_cal</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:onboard_cal must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:onboard_cal must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
