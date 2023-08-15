@@ -41,7 +41,7 @@
 		<name>badpix_invalidation_mode</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.badpix_invalidation_mode</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Flags whether bad pixels identified by the on-board bad pixel map are 
@@ -67,7 +67,7 @@
 		<name>binning</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.binning</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Identifies whether pixel binning was applied to generate the image.
@@ -127,7 +127,7 @@
 		<name>detector1_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.detector1_temp</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO detector temperature sensor 1.
@@ -143,7 +143,7 @@
 		<name>detector2_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.detector2_temp</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO detector temperature sensor 2.
@@ -159,7 +159,7 @@
 		<name>fpe_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.fpe_temp</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO FPE board temperature.
@@ -190,7 +190,7 @@
 		<name>onboard_cal</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.onboard_cal</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Defines whether calibration table was applied to the DRACO image
@@ -282,7 +282,7 @@
 		<name>exposure_time</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.exposure_time</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Image exposure time in seconds.
@@ -298,7 +298,7 @@
 		<name>gain</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.gain</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Defines the detector gain setting used. The container class
@@ -372,7 +372,7 @@
 		<name>imaging_mode</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.imaging_mode</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			The imaging_mode defines the shutter readout mode of the DRACO detector.
@@ -411,6 +411,7 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Real</value_data_type>
+			<unit_of_measure_type>Units_of_Time</unit_of_measure_type>
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -449,7 +450,7 @@
 		<name>current_analog_reset_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_analog_reset_supply</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector analog reset supply.
@@ -465,7 +466,7 @@
 		<name>current_18vd_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_18vd_supply</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 1.8VD supply.
@@ -481,7 +482,7 @@
 		<name>current_33va_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_33va_supply</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 3.3VA supply.
@@ -497,7 +498,7 @@
 		<name>current_33vd_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_33vd_supply</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 3.3VD supply.
@@ -533,9 +534,9 @@
 		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
-			LICIACube keyword containing the UTC Time at mid exposure as measured from 
-			the effective time of aquisition. This is the reference time used
-			to generate the SPICE derived geometry values in the LICIACube fits header.
+            LICIACube keyword containing the UTC Time at mid exposure as measured from 
+			the effective time of acquisition. This is the reference time used
+			to generate the SPICE derived geometry values in the LICIACube fits header
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
@@ -566,13 +567,13 @@
 		<name>test_pattern</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.test_pattern</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			If present it describes the test pattern in the image. If there is no test pattern
 			then this keyword will not appear in the label.
 		</definition>
-		<DD_Value_Domain>
+        <DD_Value_Domain>
 			<enumeration_flag>true</enumeration_flag>
 			<value_data_type>ASCII_Short_String_Preserved</value_data_type>
 			<DD_Permissible_Value>
@@ -707,18 +708,19 @@
 		<name>window2_x_start</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_x_start</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Starting column of windowed image data with respect to a 1024 x 1025 
 			image array, where the top row of the array is the header row containing
 			metadata associated with the image. Upper left hand corner is 
-			coordinate 0,0. Set to -1 if windowing is not applied.
+			coordinate 0,0. Look at value of window2_x_end to determine whether
+			windowing is applied.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
-			<minimum_value>-1</minimum_value>
+			<minimum_value>0</minimum_value>
 			<maximum_value>512</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
@@ -727,7 +729,7 @@
 		<name>window2_x_end</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_x_end</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Ending column of windowed image data with respect to a 1024 x 1025 
@@ -739,7 +741,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>1023</maximum_value>			
+			<maximum_value>1024</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -747,19 +749,19 @@
 		<name>window2_y_start</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_y_start</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Starting row of windowed image data with respect to a 1024 x 1025 
 			image array, where the top row of the array is the header row containing
 			metadata associated with the image. Upper left hand corner is coordinate
-			0,0. Set to -1 if windowing is not applied.
+			0,0. Look at value of window2_y_end to determine whether windowing is applied.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
-			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<minimum_value>0</minimum_value>
+			<maximum_value>513</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -767,7 +769,7 @@
 		<name>window2_y_end</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_y_end</local_identifier>
-		<nillable_flag>false</nillable_flag>
+		<nillable_flag>true</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Ending row of windowed image data with respect to a 1024 x 1025 
@@ -779,7 +781,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>1024</maximum_value>			
+			<maximum_value>1025</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 	
@@ -815,8 +817,8 @@
 		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
-			Indicates whether bias subtraction step was done. If performed, then refer to the REFBIAS
-			keyword in the fits header for the name of the bias file used. This file is also 
+			Indicates whether bias subtraction step was done. If performed, then refer to the
+			Reference_List in the XML for the LID of the bias file used. The bias subtraction file is also 
 			archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -841,10 +843,8 @@
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Indicates whether dark subtraction step was done. If performed then refer to the
-			REFDARK1 and REFDARK2 keywords in the fits header for the names of the dark
-			files used. These files are also archived in the DRACO Calibrated Data Collection.
-			Also refer to the DRACO calibration pipeline description document
-			to see how the two files are utilized to interpolate temperature dependent dark currents.
+			Reference_List in the XML for the LID of the dark file used. The dark subtraction file
+			is also archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
 			<enumeration_flag>true</enumeration_flag>
@@ -868,8 +868,8 @@
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Indicates whether flat field was applied. If performed then refer
-			to the REFFLAT keyword in the fits header for the names of the 
-			flat field files used. This file is also archived in the DRACO Calibrated
+			to the Reference_List in the XML for the LID of the flat field file used. 
+			The flat field file is also archived in the DRACO Calibrated
 			Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -896,8 +896,8 @@
 			Indicates whether conversion to radiance was applied. If performed then
 			refer to the the DRACO calibration pipeline description document for the steps
 			performed to convert pixel values to electrons then from electrons to radiance.
-			The lookup table used to convert pixel values to electrons is stored in the LUPTABLE
-			keyword in the fits header along with the photometric keyword RDIDYMOS. 
+			If performed then refer to the Reference_List in the XML for the LID of the
+			lookup table used. 
 			The lookup table file is also archived in the DRACO Calibrated Data Collection.
 		</definition>
 		<DD_Value_Domain>
@@ -941,7 +941,7 @@
 			</DD_Permissible_Value>
 		</DD_Value_Domain>
 	</DD_Attribute>
-									
+								
   <DD_Class> 
     <name>DART_Parameters</name>
     <version_id>1.0</version_id>
