@@ -8,7 +8,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
                         http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 	<name>DART Mission</name>
-	<ldd_version_id>1.0.0.0</ldd_version_id>
+	<ldd_version_id>1.1.0.0</ldd_version_id>
 	<dictionary_type>Mission</dictionary_type>
 	<full_name>Raymond Espiritu</full_name>
 	<steward_id>sbn</steward_id>
@@ -17,9 +17,10 @@
 		This is the DART Mission local data dictionary setup file to be run on the 
 		PDS4 lddtool in order to create a local data dictionary.
 	</comment>
-	<last_modification_date_time>2021-02-11T23:00:00</last_modification_date_time>
+	<last_modification_date_time>2023-08-15T23:00:00</last_modification_date_time>
 
-
+	<!-- RE changed maximum_occurences of dart:liciacube_calibration_file from 1 to 2 -->
+	
 	<DD_Attribute>
 		<name>acquisition_time</name>
 		<version_id>1.0</version_id>
@@ -1226,7 +1227,7 @@
       <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>2</maximum_occurrences>
     </DD_Association>
     <DD_Association>  
       <identifier_reference>dart.window_x_start</identifier_reference>
