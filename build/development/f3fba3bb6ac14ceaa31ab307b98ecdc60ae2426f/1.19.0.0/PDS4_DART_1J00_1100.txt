@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        14.2.4
-   LDD Version Id:        1.0.0.0
+   LDD Version Id:        1.1.0.0
    LDD Label Version Id:  1.25
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Aug 10 22:30:41 UTC 2023
+   Time                   Tue Aug 15 14:34:36 UTC 2023
    Common Schema          [PDS4_PDS_1J00.xsd]
    Common Schematron      [PDS4_PDS_1J00.sch]
    IM Version Id:         1.19.0.0
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               DART Mission
-   LDD Version            1.0.0.0
+   LDD Version            1.1.0.0
    Full Name              Raymond Espiritu
    Steward                sbn
    Namespace Id           dart
@@ -48,7 +48,7 @@ Parsed Input - Header:
 		This is the DART Mission local data dictionary setup file to be run on the 
 		PDS4 lddtool in order to create a local data dictionary.
 	
-   Last Modification Time 2021-02-11T23:00:00
+   Last Modification Time 2023-08-15T23:00:00
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -541,7 +541,7 @@ Parsed Input - Classes:
 
       local identifier      dart.liciacube_calibration_file
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   2
       reference type        attribute_of
 
       local identifier      dart.window_x_start
