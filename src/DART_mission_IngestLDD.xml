@@ -20,12 +20,33 @@
 	<last_modification_date_time>2023-08-15T23:00:00</last_modification_date_time>
 
 	<!-- RE changed maximum_occurences of dart:liciacube_calibration_file from 1 to 2 -->
+	<!-- RE changed nillable flag to false for the following keywords, as the DART 
+	      investigation team felt it was better to simply omit them if the source data
+	      did not exist in the fits header.
+
+			acquisition_time
+			badpix_invalidation_mode
+			binning
+			detector1_temp
+			detector2_temp
+			fpe_temp
+			onboard_cal
+			exposure_time
+			current_analog_reset_supply
+			current_18vd_supply
+			current_33va_supply
+			current_33vd_supply
+			window2_x_start
+			window2_x_end
+			window2_y_start
+			window2_y_end
+	 -->
 	
 	<DD_Attribute>
 		<name>acquisition_time</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.acquisition_time</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation.
@@ -42,7 +63,7 @@
 		<name>badpix_invalidation_mode</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.badpix_invalidation_mode</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Flags whether bad pixels identified by the on-board bad pixel map are 
@@ -68,7 +89,7 @@
 		<name>binning</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.binning</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Identifies whether pixel binning was applied to generate the image.
@@ -128,7 +149,7 @@
 		<name>detector1_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.detector1_temp</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO detector temperature sensor 1.
@@ -144,7 +165,7 @@
 		<name>detector2_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.detector2_temp</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO detector temperature sensor 2.
@@ -160,7 +181,7 @@
 		<name>fpe_temp</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.fpe_temp</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			DRACO FPE board temperature.
@@ -191,7 +212,7 @@
 		<name>onboard_cal</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.onboard_cal</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Defines whether calibration table was applied to the DRACO image
@@ -283,7 +304,7 @@
 		<name>exposure_time</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.exposure_time</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Image exposure time in seconds.
@@ -451,7 +472,7 @@
 		<name>current_analog_reset_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_analog_reset_supply</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector analog reset supply.
@@ -467,7 +488,7 @@
 		<name>current_18vd_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_18vd_supply</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 1.8VD supply.
@@ -483,7 +504,7 @@
 		<name>current_33va_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_33va_supply</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 3.3VA supply.
@@ -499,7 +520,7 @@
 		<name>current_33vd_supply</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.current_33vd_supply</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Current for detector 3.3VD supply.
@@ -709,7 +730,7 @@
 		<name>window2_x_start</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_x_start</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Starting column of windowed image data with respect to a 1024 x 1025 
@@ -730,7 +751,7 @@
 		<name>window2_x_end</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_x_end</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Ending column of windowed image data with respect to a 1024 x 1025 
@@ -750,7 +771,7 @@
 		<name>window2_y_start</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_y_start</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Starting row of windowed image data with respect to a 1024 x 1025 
@@ -770,7 +791,7 @@
 		<name>window2_y_end</name>
 		<version_id>1.0</version_id>
 		<local_identifier>dart.window2_y_end</local_identifier>
-		<nillable_flag>true</nillable_flag>
+		<nillable_flag>false</nillable_flag>
 		<submitter_name>Raymond Espiritu</submitter_name>
 		<definition>
 			Ending row of windowed image data with respect to a 1024 x 1025 
