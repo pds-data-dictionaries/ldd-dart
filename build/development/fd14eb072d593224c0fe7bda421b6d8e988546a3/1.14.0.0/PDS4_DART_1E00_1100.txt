@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.2.4
+   LDDTool Version        14.3.0
    LDD Version Id:        1.1.0.0
    LDD Label Version Id:  1.20
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Aug 15 14:34:35 UTC 2023
+   Time                   Thu Oct 19 16:12:46 UTC 2023
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -57,19 +57,16 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Short_String_Preserved
    description             DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation. This is the time for which the GNC attitude data is valid. See the DRACO SIS for calculation of this value. 
-   nillable               true
 
    name                   badpix_invalidation_mode
    version                1.14
    value data type        ASCII_Short_String_Preserved
    description             Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. 
-   nillable               true
 
    name                   binning
    version                1.14
    value data type        ASCII_Short_String_Preserved
    description             Identifies whether pixel binning was applied to generate the image. 
-   nillable               true
 
    name                   calibration_file
    version                1.14
@@ -86,21 +83,18 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 1. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   detector2_temp
    version                1.14
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 2. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   fpe_temp
    version                1.14
    value data type        ASCII_Real
    description             DRACO FPE board temperature. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   liciacube_calibration_file
@@ -112,7 +106,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Short_String_Preserved
    description             Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. 
-   nillable               true
 
    name                   mission_phase
    version                1.14
@@ -123,7 +116,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Real
    description             Image exposure time in seconds. 
-   nillable               true
    unit of measure type   Units_of_Time
 
    name                   gain
@@ -169,28 +161,24 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Real
    description             Current for detector analog reset supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_18vd_supply
    version                1.14
    value data type        ASCII_Real
    description             Current for detector 1.8VD supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33va_supply
    version                1.14
    value data type        ASCII_Real
    description             Current for detector 3.3VA supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33vd_supply
    version                1.14
    value data type        ASCII_Real
    description             Current for detector 3.3VD supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   liciacube_sclk_image_time
@@ -252,7 +240,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Integer
    description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_x_end to determine whether windowing is applied. 
-   nillable               true
    minimum value          0
    maximum value          512
 
@@ -260,7 +247,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Integer
    description             Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   nillable               true
    minimum value          -1
    maximum value          1024
 
@@ -268,7 +254,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Integer
    description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_y_end to determine whether windowing is applied. 
-   nillable               true
    minimum value          0
    maximum value          513
 
@@ -276,7 +261,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Integer
    description             Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   nillable               true
    minimum value          -1
    maximum value          1025
 

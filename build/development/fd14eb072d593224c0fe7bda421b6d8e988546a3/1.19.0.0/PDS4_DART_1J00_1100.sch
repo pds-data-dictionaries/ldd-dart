@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.1.0.0 - Tue Aug 15 14:34:36 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.1.0.0 - Thu Oct 19 16:12:59 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -76,16 +76,16 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('BYPASS', 'USE')))) then false() else true()">
+      <sch:assert test=". = ('BYPASS', 'USE')">
         <title>dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode/dart:badpix_invalidation_mode</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode must be nulled or equal to one of the following values 'BYPASS', 'USE'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:badpix_invalidation_mode must be equal to one of the following values 'BYPASS', 'USE'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:binning">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
+      <sch:assert test=". = ('OFF', 'ON')">
         <title>dart:DRACO_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -167,9 +167,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:onboard_cal">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
+      <sch:assert test=". = ('OFF', 'ON')">
         <title>dart:DRACO_Instrument_Attributes/dart:onboard_cal/dart:onboard_cal</title>
-        The attribute dart:DRACO_Instrument_Attributes/dart:onboard_cal must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:DRACO_Instrument_Attributes/dart:onboard_cal must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -195,9 +195,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LEIA_Instrument_Attributes/dart:binning">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
+      <sch:assert test=". = ('OFF', 'ON')">
         <title>dart:LEIA_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:LEIA_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:LEIA_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -223,9 +223,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="dart:LUKE_Instrument_Attributes/dart:binning">
-      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
+      <sch:assert test=". = ('OFF', 'ON')">
         <title>dart:LUKE_Instrument_Attributes/dart:binning/dart:binning</title>
-        The attribute dart:LUKE_Instrument_Attributes/dart:binning must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
+        The attribute dart:LUKE_Instrument_Attributes/dart:binning must be equal to one of the following values 'OFF', 'ON'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
