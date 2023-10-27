@@ -41,6 +41,14 @@
 			window2_y_start
 			window2_y_end
 	 -->
+	 <!--  RE updated maximum_value for the following keywords that apply to LICIACube
+	       windowed images:
+	       
+	       window_x_start
+	       window_x_end
+	       window_y_start
+	       window_y_end
+	 -->
 	
 	<DD_Attribute>
 		<name>acquisition_time</name>
@@ -646,7 +654,6 @@
 		<definition>
 			Column where window starts with respect to a LICIACUBE image array.
 			The container identifies whether this is the LEIA or LUKE image array.
-			The LEIA image array is 2048 x 2048, the LUKE image array is 
 			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
 			Upper left hand corner is coordinate 0,0. 
 			Set to -1 if windowing is not applied.
@@ -655,7 +662,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -668,7 +675,6 @@
 		<definition>
 			Column where window ends with respect to a LICIACUBE image array.
 			The container identifies whether this is the LEIA or LUKE image array.
-			The LEIA image array is 2048 x 2048, the LUKE image array is 
 			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
 			Upper left hand corner is coordinate 0,0. 
 			Set to -1 if windowing is not applied.
@@ -677,7 +683,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -691,7 +697,6 @@
 		<definition>
 			Row where window starts with respect to a LICIACUBE image array.
 			The container identifies whether this is the LEIA or LUKE image array.
-			The LEIA image array is 2048 x 2048, the LUKE image array is 
 			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
 			Upper left hand corner is coordinate 0,0. 
 			Set to -1 if windowing is not applied.
@@ -700,7 +705,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -713,7 +718,6 @@
 		<definition>
 			Row where window ends with respect to a LICIACUBE image array.
 			The container identifies whether this is the LEIA or LUKE image array.
-			The LEIA image array is 2048 x 2048, the LUKE image array is 
 			For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image.
 			Upper left hand corner is coordinate 0,0. 
 			Set to -1 if windowing is not applied.
@@ -722,7 +726,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
