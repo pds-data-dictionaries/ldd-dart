@@ -1,25 +1,27 @@
 
 >>  INFO LDDTOOL Version: 14.3.0
->>  INFO IM Version Id: 1.19.0.0
+>>  INFO IM Version Id: 1.14.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.25
->>  INFO Date: Thu Oct 19 16:12:59 UTC 2023
+>>  INFO IM Label Version Id: 1.20
+>>  INFO Date: Fri Oct 27 15:04:02 UTC 2023
 >>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Rule
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Assert
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:dart
 >>> INFO Init:  - Config.Properties Namespace Id Using:dart
 >>> INFO Init:  - LDD Dictionary_Type is Mission
 >>> INFO Attribute: <test_pattern> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <window_x_start> - The default minimum value provided by the attribute's data type is being overridden with -1
->>> INFO Attribute: <window_x_start> - The default maximum value provided by the attribute's data type is being overridden with 512
+>>> INFO Attribute: <window_x_start> - The default maximum value provided by the attribute's data type is being overridden with 2047
 >>> INFO Attribute: <window_x_end> - The default minimum value provided by the attribute's data type is being overridden with -1
->>> INFO Attribute: <window_x_end> - The default maximum value provided by the attribute's data type is being overridden with 512
+>>> INFO Attribute: <window_x_end> - The default maximum value provided by the attribute's data type is being overridden with 2047
 >>> INFO Attribute: <window_y_start> - The default minimum value provided by the attribute's data type is being overridden with -1
->>> INFO Attribute: <window_y_start> - The default maximum value provided by the attribute's data type is being overridden with 512
+>>> INFO Attribute: <window_y_start> - The default maximum value provided by the attribute's data type is being overridden with 2047
 >>> INFO Attribute: <window_y_end> - The default minimum value provided by the attribute's data type is being overridden with -1
->>> INFO Attribute: <window_y_end> - The default maximum value provided by the attribute's data type is being overridden with 512
+>>> INFO Attribute: <window_y_end> - The default maximum value provided by the attribute's data type is being overridden with 2047
 >>> INFO Attribute: <window2_x_start> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <window2_x_start> - The default maximum value provided by the attribute's data type is being overridden with 512
 >>> INFO Attribute: <window2_x_end> - The default minimum value provided by the attribute's data type is being overridden with -1
@@ -31,13 +33,13 @@
 >>> WARNING Attribute: <observation_type> - The 'type' attribute must have at least one permissible value.
 
  -- LDDTool Execution Summary --
-     1 warning(s)
+     3 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1J00
+     - IM Version: 1E00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -47,9 +49,9 @@ Input:
 
 Output:
 
-     - ./PDS4_DART_1J00_1100.xsd
-     - ./PDS4_DART_1J00_1100.sch
-     - ./PDS4_DART_1J00_1100.xml
-     - ./export/JSON/PDS4_PDS_1J00.JSON
+     - ./PDS4_DART_1E00_1100.xsd
+     - ./PDS4_DART_1E00_1100.sch
+     - ./PDS4_DART_1E00_1100.xml
+     - ./export/JSON/PDS4_PDS_1E00.JSON
 
 >>  INFO Exit(0)
