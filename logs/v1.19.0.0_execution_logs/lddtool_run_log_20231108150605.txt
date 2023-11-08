@@ -1,0 +1,55 @@
+
+>>  INFO LDDTOOL Version: 14.3.0
+>>  INFO IM Version Id: 1.19.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.25
+>>  INFO Date: Wed Nov 08 15:06:05 UTC 2023
+>>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:dart
+>>> INFO Init:  - Config.Properties Namespace Id Using:dart
+>>> INFO Init:  - LDD Dictionary_Type is Mission
+>>> INFO Attribute: <test_pattern> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <window_x_start> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window_x_start> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <window_x_end> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window_x_end> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <window_y_start> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window_y_start> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <window_y_end> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window_y_end> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <window2_x_start> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <window2_x_start> - The default maximum value provided by the attribute's data type is being overridden with 512
+>>> INFO Attribute: <window2_x_end> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window2_x_end> - The default maximum value provided by the attribute's data type is being overridden with 1024
+>>> INFO Attribute: <window2_y_start> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <window2_y_start> - The default maximum value provided by the attribute's data type is being overridden with 513
+>>> INFO Attribute: <window2_y_end> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <window2_y_end> - The default maximum value provided by the attribute's data type is being overridden with 1025
+>>> WARNING Attribute: <observation_type> - The 'type' attribute must have at least one permissible value.
+
+ -- LDDTool Execution Summary --
+     1 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1J00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-dart/ldd-dart/src/DART_mission_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_DART_1J00_1100.xsd
+     - ./PDS4_DART_1J00_1100.sch
+     - ./PDS4_DART_1J00_1100.xml
+     - ./export/JSON/PDS4_PDS_1J00.JSON
+
+>>  INFO Exit(0)
