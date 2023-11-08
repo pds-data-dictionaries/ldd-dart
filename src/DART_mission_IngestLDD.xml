@@ -49,6 +49,9 @@
 	       window_y_start
 	       window_y_end
 	 -->
+	<!-- RE changed maximum_occurences of dart:liciacube_calibration_file from 1 to 2 
+	       for LUKE_Instrument_Attributes class. Previously only updated it for 
+	       LEIA_Instrument_Attributes class.-->
 	
 	<DD_Attribute>
 		<name>acquisition_time</name>
@@ -1324,7 +1327,7 @@
       <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>2</maximum_occurrences>
     </DD_Association>
     <DD_Association>  
       <identifier_reference>dart.window_x_start</identifier_reference>
