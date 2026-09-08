@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.2.4
-   LDD Version Id:        1.0.0.0
+   LDDTool Version        14.3.0
+   LDD Version Id:        1.1.0.0
    LDD Label Version Id:  1.25
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Aug 10 22:30:41 UTC 2023
+   Time                   Wed Nov 08 15:06:05 UTC 2023
    Common Schema          [PDS4_PDS_1J00.xsd]
    Common Schematron      [PDS4_PDS_1J00.sch]
    IM Version Id:         1.19.0.0
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               DART Mission
-   LDD Version            1.0.0.0
+   LDD Version            1.1.0.0
    Full Name              Raymond Espiritu
    Steward                sbn
    Namespace Id           dart
@@ -48,7 +48,7 @@ Parsed Input - Header:
 		This is the DART Mission local data dictionary setup file to be run on the 
 		PDS4 lddtool in order to create a local data dictionary.
 	
-   Last Modification Time 2021-02-11T23:00:00
+   Last Modification Time 2023-08-15T23:00:00
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -57,19 +57,16 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             DRACO image time of validity (TOV) in integer seconds, in spacecraft clock notation. This is the time for which the GNC attitude data is valid. See the DRACO SIS for calculation of this value. 
-   nillable               true
 
    name                   badpix_invalidation_mode
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Flags whether bad pixels identified by the on-board bad pixel map are invalidated by SMARTNAV. When invalidated the pixels in the raw image are set to the SNAVFLAG value in the raw fits header. 
-   nillable               true
 
    name                   binning
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Identifies whether pixel binning was applied to generate the image. 
-   nillable               true
 
    name                   calibration_file
    version                1.19
@@ -86,21 +83,18 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 1. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   detector2_temp
    version                1.19
    value data type        ASCII_Real
    description             DRACO detector temperature sensor 2. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   fpe_temp
    version                1.19
    value data type        ASCII_Real
    description             DRACO FPE board temperature. 
-   nillable               true
    unit of measure type   Units_of_Temperature
 
    name                   liciacube_calibration_file
@@ -112,7 +106,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Short_String_Preserved
    description             Defines whether calibration table was applied to the DRACO image onboard the DART spacecraft prior to downlink. 
-   nillable               true
 
    name                   mission_phase
    version                1.19
@@ -123,7 +116,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             Image exposure time in seconds. 
-   nillable               true
    unit of measure type   Units_of_Time
 
    name                   gain
@@ -169,28 +161,24 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Real
    description             Current for detector analog reset supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_18vd_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 1.8VD supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33va_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VA supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   current_33vd_supply
    version                1.19
    value data type        ASCII_Real
    description             Current for detector 3.3VD supply. 
-   nillable               true
    unit of measure type   Units_of_Current
 
    name                   liciacube_sclk_image_time
@@ -223,36 +211,35 @@ Parsed Input - Attributes:
    name                   window_x_start
    version                1.19
    value data type        ASCII_Integer
-   description             Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   description             Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_x_end
    version                1.19
    value data type        ASCII_Integer
-   description             Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   description             Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_y_start
    version                1.19
    value data type        ASCII_Integer
-   description             Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   description             Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_y_end
    version                1.19
    value data type        ASCII_Integer
-   description             Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
+   description             Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window2_x_start
    version                1.19
    value data type        ASCII_Integer
    description             Starting column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_x_end to determine whether windowing is applied. 
-   nillable               true
    minimum value          0
    maximum value          512
 
@@ -260,7 +247,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Integer
    description             Ending column of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   nillable               true
    minimum value          -1
    maximum value          1024
 
@@ -268,7 +254,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Integer
    description             Starting row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Look at value of window2_y_end to determine whether windowing is applied. 
-   nillable               true
    minimum value          0
    maximum value          513
 
@@ -276,7 +261,6 @@ Parsed Input - Attributes:
    version                1.19
    value data type        ASCII_Integer
    description             Ending row of windowed image data with respect to a 1024 x 1025 image array, where the top row of the array is the header row containing metadata associated with the image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
-   nillable               true
    minimum value          -1
    maximum value          1025
 
@@ -541,7 +525,7 @@ Parsed Input - Classes:
 
       local identifier      dart.liciacube_calibration_file
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   2
       reference type        attribute_of
 
       local identifier      dart.window_x_start
@@ -599,7 +583,7 @@ Parsed Input - Classes:
 
       local identifier      dart.liciacube_calibration_file
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   2
       reference type        attribute_of
 
       local identifier      dart.window_x_start
