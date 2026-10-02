@@ -8,7 +8,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
                         http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 	<name>DART Mission</name>
-	<ldd_version_id>1.0.0.0</ldd_version_id>
+	<ldd_version_id>1.2.0.0</ldd_version_id>
 	<dictionary_type>Mission</dictionary_type>
 	<full_name>Raymond Espiritu</full_name>
 	<steward_id>sbn</steward_id>
@@ -17,8 +17,31 @@
 		This is the DART Mission local data dictionary setup file to be run on the 
 		PDS4 lddtool in order to create a local data dictionary.
 	</comment>
-	<last_modification_date_time>2021-02-11T23:00:00</last_modification_date_time>
+	<last_modification_date_time>2026-10-02</last_modification_date_time>
 
+<!--This version of the dictionary sets nillable_flag to true for the following
+	attributes:
+	
+	acquisition_time
+	badpix_invalidation_mode
+	binning
+	detector1_temp
+	detector2_temp
+	fpe_temp
+	onboard_cal
+	exposure_time
+	current_analog_reset_supply
+	current_18vd_supply
+	current_33va_supply
+	current_33vd_supply
+	window2_x_start
+	window2_x_end
+	window2_y_start
+	window2_y_end
+
+	Additionally, it removes unit_of_measure_type (with value of Units_of_Time) from the
+	attribute definitions for lineread and pix_delay, both of which have a unit of time
+	specified in their definition. -->
 
 	<DD_Attribute>
 		<name>acquisition_time</name>
@@ -411,7 +434,6 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Real</value_data_type>
-			<unit_of_measure_type>Units_of_Time</unit_of_measure_type>
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -442,7 +464,6 @@
 		<DD_Value_Domain>
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Real</value_data_type>
-			<unit_of_measure_type>Units_of_Time</unit_of_measure_type>
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -633,7 +654,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -655,7 +676,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -678,7 +699,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -700,7 +721,7 @@
 			<enumeration_flag>false</enumeration_flag>
 			<value_data_type>ASCII_Integer</value_data_type>
 			<minimum_value>-1</minimum_value>
-			<maximum_value>512</maximum_value>			
+			<maximum_value>2047</maximum_value>			
 		</DD_Value_Domain>
 	</DD_Attribute>
 
@@ -1226,7 +1247,7 @@
       <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>2</maximum_occurrences>
     </DD_Association>
     <DD_Association>  
       <identifier_reference>dart.window_x_start</identifier_reference>
@@ -1298,7 +1319,7 @@
       <identifier_reference>dart.liciacube_calibration_file</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>2</maximum_occurrences>
     </DD_Association>
     <DD_Association>  
       <identifier_reference>dart.window_x_start</identifier_reference>
