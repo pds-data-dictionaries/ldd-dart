@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.2.4
-   LDD Version Id:        1.0.0.0
+   LDDTool Version        16.1.3
+   LDD Version Id:        1.2.0.0
    LDD Label Version Id:  1.20
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Aug 10 22:30:43 UTC 2023
+   Time                   Fri Oct 02 19:16:22 UTC 2026
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -15,7 +15,6 @@ Configuration:
    IM Label Version Id:   1.20
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
-   IM Configuration File  [MDPTNConfigClassDisp.xml]
    IM Glossary            [Glossary.pins]
    IM Document Spec       [DMDocument.pins]
 
@@ -40,7 +39,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               DART Mission
-   LDD Version            1.0.0.0
+   LDD Version            1.2.0.0
    Full Name              Raymond Espiritu
    Steward                sbn
    Namespace Id           dart
@@ -48,7 +47,7 @@ Parsed Input - Header:
 		This is the DART Mission local data dictionary setup file to be run on the 
 		PDS4 lddtool in order to create a local data dictionary.
 	
-   Last Modification Time 2021-02-11T23:00:00
+   Last Modification Time 2026-10-02
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -152,7 +151,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Real
    description             Defines the time it takes to readout a single line of the detector in microsec/line. 
-   unit of measure type   Units_of_Time
 
    name                   readout_time
    version                1.14
@@ -163,7 +161,6 @@ Parsed Input - Attributes:
    version                1.14
    value data type        ASCII_Real
    description             Delay between sequential pixels in line in nanoseconds. 
-   unit of measure type   Units_of_Time
 
    name                   current_analog_reset_supply
    version                1.14
@@ -225,28 +222,28 @@ Parsed Input - Attributes:
    value data type        ASCII_Integer
    description             Column where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_x_end
    version                1.14
    value data type        ASCII_Integer
    description             Column where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_y_start
    version                1.14
    value data type        ASCII_Integer
    description             Row where window starts with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window_y_end
    version                1.14
    value data type        ASCII_Integer
    description             Row where window ends with respect to a LICIACUBE image array. The container identifies whether this is the LEIA or LUKE image array. The LEIA image array is 2048 x 2048, the LUKE image array is For LEIA this is a 2048 x 2048 image, for LUKE it is a 1088 x 2048 image. Upper left hand corner is coordinate 0,0. Set to -1 if windowing is not applied. 
    minimum value          -1
-   maximum value          512
+   maximum value          2047
 
    name                   window2_x_start
    version                1.14
@@ -541,7 +538,7 @@ Parsed Input - Classes:
 
       local identifier      dart.liciacube_calibration_file
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   2
       reference type        attribute_of
 
       local identifier      dart.window_x_start
@@ -599,7 +596,7 @@ Parsed Input - Classes:
 
       local identifier      dart.liciacube_calibration_file
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   2
       reference type        attribute_of
 
       local identifier      dart.window_x_start

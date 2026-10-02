@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.0.0.0 - Thu Aug 10 22:30:43 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:dart  Version:1.2.0.0 - Fri Oct 02 19:16:22 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -159,24 +159,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="dart:DRACO_Instrument_Attributes/dart:lineread">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr')">
-        <title>dart:DRACO_Instrument_Attributes/dart:lineread/dart:lineread</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="dart:DRACO_Instrument_Attributes/dart:onboard_cal">
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('OFF', 'ON')))) then false() else true()">
         <title>dart:DRACO_Instrument_Attributes/dart:onboard_cal/dart:onboard_cal</title>
         The attribute dart:DRACO_Instrument_Attributes/dart:onboard_cal must be nulled or equal to one of the following values 'OFF', 'ON'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="dart:DRACO_Instrument_Attributes/dart:pix_delay">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr')">
-        <title>dart:DRACO_Instrument_Attributes/dart:pix_delay/dart:pix_delay</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
